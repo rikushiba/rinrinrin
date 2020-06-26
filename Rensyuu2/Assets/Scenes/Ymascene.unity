@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 793373214}
   - component: {fileID: 793373213}
   m_Layer: 0
-  m_Name: Ymabackground
+  m_Name: YmaBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4026,7 +4026,7 @@ GameObject:
   - component: {fileID: 1274423880}
   - component: {fileID: 1274423879}
   m_Layer: 0
-  m_Name: Ymabuilding
+  m_Name: YmaBuilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

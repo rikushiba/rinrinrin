@@ -269,8 +269,9 @@ GameObject:
   - component: {fileID: 1102012514}
   - component: {fileID: 1102012516}
   - component: {fileID: 1102012515}
+  - component: {fileID: 1102012517}
   m_Layer: 0
-  m_Name: kyoten building
+  m_Name: KyotenBuilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1058,6 +1059,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1102012517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102012513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7c7fd6e97d7244db1af32e49a0a25d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1418296094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1083,7 @@ GameObject:
   - component: {fileID: 1418296097}
   - component: {fileID: 1418296096}
   m_Layer: 0
-  m_Name: kyoten background
+  m_Name: KyotenBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
