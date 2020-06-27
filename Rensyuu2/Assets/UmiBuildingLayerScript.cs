@@ -6,30 +6,28 @@ using UnityEngine.UIElements;
 
 public class UmiBuildingLayerScript : MonoBehaviour
 {
-    private void PositionGet()
+    Vector3Int[] position = new Vector3Int[400];
+    public TileBase umitile;
+    Tilemap tilemap;
+
+    // Start is called before the first frame update
+    void Start()
     {
+        tilemap = GetComponent<Tilemap>();
         int i = 0;
-        var tilemap = GetComponent<Tilemap>();
-        Vector3Int[] position = new Vector3Int[400];
         var bound = tilemap.cellBounds;
-        for (int y = bound.max.y - 1; y >= bound.min.y; --y)
+        for (int y = 10; y >= -10; --y)
         {
-            for (int x = bound.min.x; x < bound.max.x; ++x)
+            for (int x = -14; x < 6; ++x)
             {
                 position[i] = new Vector3Int(x, y, 0);
                 i++;
             }
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+        tilemap.BoxFill(position[200], umitile, -5, -5, 5, 5);
     }
 }
