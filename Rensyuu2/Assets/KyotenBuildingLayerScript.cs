@@ -8,8 +8,8 @@ public class KyotenBuildingLayerScript : MonoBehaviour
 {
     public TileBase Kyotentile;
     Tilemap tilemap;
-    void Fill()
-    {
+    
+    
         
         // Start is called before the first frame update
         void Start()
@@ -21,8 +21,8 @@ public class KyotenBuildingLayerScript : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-            var uposition = new Vector3Int(0, 0, 0);
-            tilemap.BoxFill(uposition, Kyotentile, -5, -5, 5, 5);
+            var uposition = new Vector3Int(4,-8,0 );
+            tilemap.SetTile(uposition, Kyotentile);
         }
-    }
+    
 }
