@@ -19,6 +19,6 @@ public class UpbuttonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnMouseDown();
+        
     }
 }
