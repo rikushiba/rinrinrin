@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 
-public class RightbuttonScript : MonoBehaviour
+public class LeftbuttonScript : MonoBehaviour
 {
-   GameObject frame;
+    GameObject frame;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +14,13 @@ public class RightbuttonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     public void onClickAct()
     {
-        if (frame.transform.position.x < 9)
+        if (frame.transform.position.x > -9)
         {
-            frame.transform.Translate(1, 0, 0);
+            frame.transform.Translate(-1,0, 0);
         }
         else
         {
