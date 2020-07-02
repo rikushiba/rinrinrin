@@ -2368,6 +2368,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Kyotentile: {fileID: 11400000, guid: 6830f7ae0c2a59d49944d5a3168e58ca, type: 2}
+--- !u!1 &1238697981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6903780302996954877, guid: 0135898575994814a8e26b4d545bdbb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5576402584465409244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1238697982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238697981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b020e9162ebda04c9b6177427d870a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1418296094
 GameObject:
   m_ObjectHideFlags: 0
@@ -6298,5 +6316,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3439653798585597389, guid: 0135898575994814a8e26b4d545bdbb1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0135898575994814a8e26b4d545bdbb1, type: 3}
