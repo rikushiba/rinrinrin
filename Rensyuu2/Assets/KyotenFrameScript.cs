@@ -25,7 +25,7 @@ public class KyotenFrameScript : MonoBehaviour
             Mposition = Input.mousePosition;
             Mposition.z = 20f;
             screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(Mposition);
-            if (-10 <= screenToWorldPointPosition.x && screenToWorldPointPosition.x <= 10 && -9 <= screenToWorldPointPosition.y && screenToWorldPointPosition.y <= 10)
+            if (-10 <= screenToWorldPointPosition.x && screenToWorldPointPosition.x <= 10 && -10 <= screenToWorldPointPosition.y && screenToWorldPointPosition.y <= 10)
             {
                 Obp.x = (Mathf.Ceil(screenToWorldPointPosition.x) + Mathf.Floor(screenToWorldPointPosition.x)) / 2;
                 Obp.y = (Mathf.Ceil(screenToWorldPointPosition.y) + Mathf.Floor(screenToWorldPointPosition.y)) / 2;

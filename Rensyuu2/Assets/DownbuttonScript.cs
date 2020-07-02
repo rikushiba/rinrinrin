@@ -19,7 +19,7 @@ public class DownbuttonScript : MonoBehaviour
  }
     public void onClickAct()
     {
-        if (frame.transform.position.y > -8)
+        if (frame.transform.position.y > -9)
         {
             frame.transform.Translate(0, -1, 0);
         }
