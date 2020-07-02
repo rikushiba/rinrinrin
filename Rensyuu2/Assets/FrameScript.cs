@@ -25,7 +25,7 @@ public class FrameScript : MonoBehaviour
             Mposition = Input.mousePosition;
             Mposition.z = 20f;
             screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(Mposition);
-            if (-14 <= screenToWorldPointPosition.x && screenToWorldPointPosition.x <= 7 && -10 <= screenToWorldPointPosition.y && screenToWorldPointPosition.y <= 11)
+            if (-14 <= screenToWorldPointPosition.x && screenToWorldPointPosition.x <= 6 && -9 <= screenToWorldPointPosition.y && screenToWorldPointPosition.y <= 11)
             {
                 Obp.x = (Mathf.Ceil(screenToWorldPointPosition.x) + Mathf.Floor(screenToWorldPointPosition.x)) / 2;
                 Obp.y = (Mathf.Ceil(screenToWorldPointPosition.y) + Mathf.Floor(screenToWorldPointPosition.y)) / 2;
