@@ -14,6 +14,15 @@ public class SendScript : MonoBehaviour
     public TileBase Beach;
     public TileBase Beach2;
 
+    public TileBase Tree;
+    public TileBase Tree2;
+    public TileBase Tree3;
+    public TileBase Tree4;
+    public TileBase Tree5;
+    public TileBase Tree6;
+    public TileBase Tree7;
+    public TileBase Tree8;
+
     // Start is called before the first frame update
     void Start()
     {

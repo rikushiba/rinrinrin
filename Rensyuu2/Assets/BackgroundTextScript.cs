@@ -11,6 +11,8 @@ public class BackgroundTextScript : MonoBehaviour
     TileBase UmiTile2;
     TileBase Nohara;
     TileBase Nohara2;
+    TileBase DarkNohara;
+    TileBase DarkNohara2;
     TileBase Beach;
     TileBase Beach2;
 
@@ -63,9 +65,17 @@ public class BackgroundTextScript : MonoBehaviour
         {
             BackgroundText.text = "草原";
         }
+        else if (DarkNohara == tile || DarkNohara2 == tile)
+        {
+            BackgroundText.text = "湿地";
+        }
         else if (Beach == tile || Beach2 == tile)
         {
             BackgroundText.text = "砂浜";
+        }
+        else 
+        {
+            BackgroundText.text = "";
         }
     }
 }
