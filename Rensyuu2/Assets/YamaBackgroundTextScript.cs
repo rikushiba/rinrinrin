@@ -94,7 +94,7 @@ public class YamaBackgroundTextScript : MonoBehaviour
         }
         else
         {
-            BackgroundText.text = "";
+            BackgroundText.text = "---";
         }
     }
 }

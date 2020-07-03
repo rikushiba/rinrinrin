@@ -84,7 +84,7 @@ public class UmiBuildingTextScript : MonoBehaviour
         }
         else 
         {
-            BuildingText.text = "";
+            BuildingText.text = "---";
         }
     }
 }

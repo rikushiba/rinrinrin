@@ -94,7 +94,7 @@ public class UmiBackgroundTextScript : MonoBehaviour
         }
         else 
         {
-            BackgroundText.text = "";
+            BackgroundText.text = "---";
         }
     }
 }
