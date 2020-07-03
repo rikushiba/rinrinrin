@@ -1182,6 +1182,10 @@ MonoBehaviour:
   DarkNohara2: {fileID: 11400000, guid: 6a7ec0ada30274a439d387e2a32162ef, type: 2}
   Beach: {fileID: 11400000, guid: dbe45f5f83cf3be4cb33904a151b53a3, type: 2}
   Beach2: {fileID: 11400000, guid: 65e046497f8392442a823e1344bb121b, type: 2}
+  Iwaba: {fileID: 11400000, guid: 6830f7ae0c2a59d49944d5a3168e58ca, type: 2}
+  Iwaba2: {fileID: 11400000, guid: 1501cb92fe7e9a6418459148528f70c8, type: 2}
+  Tsuchi: {fileID: 11400000, guid: e14e14a186880e246be0195845a05bde, type: 2}
+  Tsuchi2: {fileID: 11400000, guid: b8d637865768bac43abda7eb847fd30b, type: 2}
   Tree: {fileID: 11400000, guid: 151be15cf837689478e87a0ee1cf8ed9, type: 2}
   Tree2: {fileID: 11400000, guid: 4f858db21036df249810f7fdab19c6fd, type: 2}
   Tree3: {fileID: 11400000, guid: ee9cc35e2f4529845b74344bdf273865, type: 2}
@@ -1190,6 +1194,12 @@ MonoBehaviour:
   Tree6: {fileID: 11400000, guid: 85821431672c4984d9b2790d89fb94b5, type: 2}
   Tree7: {fileID: 11400000, guid: ee0d9f3eb3c750f459ce9942e53135d7, type: 2}
   Tree8: {fileID: 11400000, guid: b7eb270421697274bb27af1edf6bf179, type: 2}
+  Rock: {fileID: 11400000, guid: 397f87a8e70c26c4c885f21e51227968, type: 2}
+  Rock2: {fileID: 11400000, guid: 4cb90a0b91e313c44a7fb299e52476ef, type: 2}
+  Rock3: {fileID: 11400000, guid: 5c0ca932f6bc81d42ae143cb98b6f325, type: 2}
+  Rock4: {fileID: 11400000, guid: bea6069ef63e3ce42bdfcd8f30bfa029, type: 2}
+  Rock5: {fileID: 11400000, guid: 17e887399f044454ab2074e52540eee0, type: 2}
+  Rock6: {fileID: 11400000, guid: 20bb317ab8f5c364e99f557c0ced126d, type: 2}
 --- !u!4 &1292042364
 Transform:
   m_ObjectHideFlags: 0

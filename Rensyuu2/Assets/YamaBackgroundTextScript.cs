@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-public class BackgroundTextScript : MonoBehaviour
+public class YamaBackgroundTextScript : MonoBehaviour
 {
     TileBase UmiTile;
     TileBase UmiTile2;
@@ -15,6 +15,11 @@ public class BackgroundTextScript : MonoBehaviour
     TileBase DarkNohara2;
     TileBase Beach;
     TileBase Beach2;
+    TileBase Iwaba;
+    TileBase Iwaba2;
+    TileBase Tsuchi;
+    TileBase Tsuchi2;
+
 
 
     GameObject send;
@@ -31,7 +36,7 @@ public class BackgroundTextScript : MonoBehaviour
     void Awake()
     {
         send = GameObject.Find("Send");
-        background = GameObject.Find("UmiBackground");
+        background = GameObject.Find("YmaBackground");
         BackgroundText = this.GetComponent<Text>();
     }
     void Start()
@@ -41,8 +46,14 @@ public class BackgroundTextScript : MonoBehaviour
         UmiTile2 = sendscript.UmiTile2;
         Nohara = sendscript.Nohara;
         Nohara2 = sendscript.Nohara2;
+        DarkNohara = sendscript.DarkNohara;
+        DarkNohara2 = sendscript.DarkNohara2;
         Beach = sendscript.Beach;
         Beach2 = sendscript.Beach2;
+        Iwaba = sendscript.Iwaba;
+        Iwaba2 = sendscript.Iwaba2;
+        Tsuchi = sendscript.Tsuchi;
+        Tsuchi2 = sendscript.Tsuchi2;
 
         frame = GameObject.Find("frame");
         tilemap = background.GetComponent<Tilemap>();
@@ -59,7 +70,7 @@ public class BackgroundTextScript : MonoBehaviour
         tile = (TileBase)tilemap.GetTile(framePositionInt);
         if (UmiTile == tile || UmiTile2 == tile)
         {
-            BackgroundText.text = "海";
+            BackgroundText.text = "川";
         }
         else if (Nohara == tile || Nohara2 == tile)
         {
@@ -73,7 +84,15 @@ public class BackgroundTextScript : MonoBehaviour
         {
             BackgroundText.text = "砂浜";
         }
-        else 
+        else if (Iwaba == tile || Iwaba2 == tile)
+        {
+            BackgroundText.text = "岩場";
+        }
+        else if (Tsuchi == tile || Tsuchi2 == tile)
+        {
+            BackgroundText.text = "土";
+        }
+        else
         {
             BackgroundText.text = "";
         }

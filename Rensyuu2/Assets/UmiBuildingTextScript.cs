@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
-public class BuildingTextScript : MonoBehaviour
+public class UmiBuildingTextScript : MonoBehaviour
 {
     TileBase tree;
     TileBase tree2;
@@ -15,6 +15,12 @@ public class BuildingTextScript : MonoBehaviour
     TileBase tree6;
     TileBase tree7;
     TileBase tree8;
+    TileBase Rock;
+    TileBase Rock2;
+    TileBase Rock3;
+    TileBase Rock4;
+    TileBase Rock5;
+    TileBase Rock6;
 
     GameObject send;
     SendScript sendscript;
@@ -44,6 +50,12 @@ public class BuildingTextScript : MonoBehaviour
         tree6 = sendscript.Tree6;
         tree7 = sendscript.Tree7;
         tree8 = sendscript.Tree8;
+        Rock = sendscript.Rock;
+        Rock2 = sendscript.Rock2;
+        Rock3 = sendscript.Rock3;
+        Rock4 = sendscript.Rock4;
+        Rock5 = sendscript.Rock5;
+        Rock6 = sendscript.Rock6;
 
         frame = GameObject.Find("frame");
         tilemap = building.GetComponent<Tilemap>();
@@ -64,6 +76,11 @@ public class BuildingTextScript : MonoBehaviour
             tile == tree7 || tile == tree8 )
         {
             BuildingText.text = "木";
+        }
+        else if(tile == Rock || tile == Rock2 || tile == Rock3 ||
+            tile == Rock4 || tile == Rock5 || tile == Rock6)
+        {
+            BuildingText.text = "岩";
         }
         else 
         {
