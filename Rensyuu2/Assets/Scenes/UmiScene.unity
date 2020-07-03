@@ -1127,6 +1127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UmiTile: {fileID: 11400000, guid: 0a9d2f0b68749c5488c799b51e069264, type: 2}
+  UmiTile2: {fileID: 11400000, guid: c27b0441c5f093747b2c14915acda9c9, type: 2}
 --- !u!1 &1186655465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1240,7 @@ GameObject:
   - component: {fileID: 1431120444}
   - component: {fileID: 1431120443}
   m_Layer: 0
-  m_Name: UmiBackgroung
+  m_Name: UmiBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

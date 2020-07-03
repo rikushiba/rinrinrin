@@ -28,7 +28,6 @@ public class UmiBuildingLayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var sposition = new Vector3Int(-10, -5, 0);
-        tilemap.SetTile(position[0], umitile);
+
     }
 }
