@@ -6,6 +6,7 @@ public class CloseScript : MonoBehaviour
 {
     public GameObject Grid;
     public GameObject Close;
+    public GameObject Frame2;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,6 @@ public class CloseScript : MonoBehaviour
     {
         Grid.SetActive(false);
         Close.SetActive(false);
+        Frame2.SetActive(false);
     }
 }
