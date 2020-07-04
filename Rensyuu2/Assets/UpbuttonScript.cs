@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class UpbuttonScript : MonoBehaviour
 {
-    GameObject frame;
-    GameObject frame2;
+   public GameObject frame;
+   public GameObject frame2;
 
     // Start is called before the first frame update
     void Start()
     {
-        frame = GameObject.Find("frame");
-        frame2 = GameObject.Find("frame2");
+        
     }
     
     // Update is called once per frame

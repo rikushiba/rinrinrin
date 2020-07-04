@@ -10,7 +10,9 @@ public class OpenScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Grid.SetActive(false);
+        Close.SetActive(false);
+        Frame2.SetActive(false);
     }
 
     // Update is called once per frame
