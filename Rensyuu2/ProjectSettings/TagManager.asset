@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Haikei
+    uniqueID: 4038483375
+    locked: 0
   - name: Background
     uniqueID: 3840626819
     locked: 0
