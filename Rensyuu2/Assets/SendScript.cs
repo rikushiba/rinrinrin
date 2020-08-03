@@ -33,6 +33,11 @@ public class SendScript : MonoBehaviour
     public TileBase Rock5;
     public TileBase Rock6;
 
+    public GameObject frame;
+    public GameObject frame2;
+    public GameObject close;
+    public GameObject select;
+    public GameObject menu;
 
     // Start is called before the first frame update
     void Start()
