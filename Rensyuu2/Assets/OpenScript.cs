@@ -5,17 +5,29 @@ using UnityEngine.Tilemaps;
 
 public class OpenScript : MonoBehaviour
 {
-    public GameObject Grid;
+    public Tilemap KBmap;  
+    public Tilemap KTmap;
+    public GameObject KT;
     public GameObject Close;
     public GameObject Frame2;
-   
-    
+
+    private void Awake()
+    {
+        KBmap = GetComponent<Tilemap>();
+        KTmap = GetComponent<Tilemap>();
+
+        var KTpos = new Vector3Int(0, 0, 0);
+        Tile t = (Tile)KTmap.GetTile(KTpos);
+
+        var KBpos = new Vector3Int(1, 1, 0);
+        KBmap.SetTile(KBpos, t);
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
-        Grid.SetActive(false);
-        Close.SetActive(false);
-        Frame2.SetActive(false);
+       
     }
 
     // Update is called once per frame
@@ -25,13 +37,13 @@ public class OpenScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (Grid && Close && Frame2.active)
+        if (KT && Close && Frame2.active)
         {
             
         }
         else
         {
-            Grid.SetActive(true);
+            KT.SetActive(true);
             Close.SetActive(true);
             Frame2.SetActive(true);
         }
