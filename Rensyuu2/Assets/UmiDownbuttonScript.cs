@@ -5,6 +5,7 @@ using UnityEngine;
 public class UmiDownbuttonScript : MonoBehaviour
 {
     GameObject frame;
+    public GameObject MenuText;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +19,20 @@ public class UmiDownbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (frame.transform.position.y > -8)
+        if (MenuText.active)
         {
-            frame.transform.Translate(0, -1, 0);
+
         }
         else
         {
-            frame.transform.Translate(0, 0, 0);
+            if (frame.transform.position.y > -8)
+            {
+                frame.transform.Translate(0, -1, 0);
+            }
+            else
+            {
+                frame.transform.Translate(0, 0, 0);
+            }
         }
     }
 }
