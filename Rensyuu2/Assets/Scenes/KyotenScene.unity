@@ -282,7 +282,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -759348579
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -560,7 +560,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -759348579
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 80f49c2f3a6c7f944ada5ba9da81139b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -717,7 +717,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -759348579
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 80f49c2f3a6c7f944ada5ba9da81139b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -874,7 +874,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -759348579
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 80f49c2f3a6c7f944ada5ba9da81139b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5894,8 +5894,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Grid: {fileID: 185866685}
-  Close: {fileID: 1449302300}
-  Frame2: {fileID: 1128373754}
 --- !u!212 &1449302304
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6117,7 +6115,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -759348579
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 80f49c2f3a6c7f944ada5ba9da81139b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6219,6 +6217,80 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &2127316259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2127316261}
+  - component: {fileID: 2127316260}
+  m_Layer: 0
+  m_Name: Send
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2127316260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127316259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8852dc55f67a074a9530d0a83cdd3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UmiTile: {fileID: 0}
+  UmiTile2: {fileID: 0}
+  Nohara: {fileID: 0}
+  Nohara2: {fileID: 0}
+  DarkNohara: {fileID: 0}
+  DarkNohara2: {fileID: 0}
+  Beach: {fileID: 0}
+  Beach2: {fileID: 0}
+  Iwaba: {fileID: 0}
+  Iwaba2: {fileID: 0}
+  Tsuchi: {fileID: 0}
+  Tsuchi2: {fileID: 0}
+  Tree: {fileID: 0}
+  Tree2: {fileID: 0}
+  Tree3: {fileID: 0}
+  Tree4: {fileID: 0}
+  Tree5: {fileID: 0}
+  Tree6: {fileID: 0}
+  Tree7: {fileID: 0}
+  Tree8: {fileID: 0}
+  Rock: {fileID: 0}
+  Rock2: {fileID: 0}
+  Rock3: {fileID: 0}
+  Rock4: {fileID: 0}
+  Rock5: {fileID: 0}
+  Rock6: {fileID: 0}
+  frame: {fileID: 1238697981}
+  frame2: {fileID: 1128373754}
+  close: {fileID: 1449302300}
+  select: {fileID: 816635958}
+  menu: {fileID: 0}
+--- !u!4 &2127316261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127316259}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.964386, y: 0.9045389, z: -2.553444}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5576402584465409244
 PrefabInstance:
   m_ObjectHideFlags: 0

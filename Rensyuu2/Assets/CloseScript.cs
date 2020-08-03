@@ -5,12 +5,21 @@ using UnityEngine;
 public class CloseScript : MonoBehaviour
 {
     public GameObject Grid;
-    public GameObject Close;
-    public GameObject Frame2;
+    GameObject send;
+    SendScript sendscript;
+    GameObject Close;
+    GameObject Frame2;
+
+    private void Awake()
+    {
+        send = GameObject.Find("Send");
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+        sendscript = send.GetComponent<SendScript>();
+        Close = sendscript.close;
+        Frame2 = sendscript.frame2;
     }
 
     // Update is called once per frame

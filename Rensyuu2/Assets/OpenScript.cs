@@ -8,13 +8,18 @@ public class OpenScript : MonoBehaviour
     public Tilemap KBmap;  
     public Tilemap KTmap;
     public GameObject KT;
-    public GameObject Close;
-    public GameObject Frame2;
+    
+    GameObject send;
+    SendScript sendscript;
+    GameObject Close;
+    GameObject Frame2;
 
     private void Awake()
     {
         KBmap = GetComponent<Tilemap>();
         KTmap = GetComponent<Tilemap>();
+        send = GameObject.Find("Send");
+        
 
         var KTpos = new Vector3Int(0, 0, 0);
         Tile t = (Tile)KTmap.GetTile(KTpos);
@@ -27,7 +32,9 @@ public class OpenScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        sendscript = send.GetComponent<SendScript>();
+        Close = sendscript.close;
+        Frame2 = sendscript.frame2;
     }
 
     // Update is called once per frame
