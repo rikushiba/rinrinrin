@@ -30,12 +30,12 @@ public class MenuButtonScript : MonoBehaviour
         if (MenuText.active)
         {
             MenuText.SetActive(false);
-            ss.close.SetActive(false);
+            ss.Close.SetActive(false);
         }
         else
         {
             MenuText.SetActive(true);
-            ss.close.SetActive(true);
+            ss.Close.SetActive(true);
         }
     }
 }

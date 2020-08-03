@@ -33,8 +33,8 @@ public class OpenScript : MonoBehaviour
     void Start()
     {
         sendscript = send.GetComponent<SendScript>();
-        Close = sendscript.close;
-        Frame2 = sendscript.frame2;
+        Close = sendscript.Close;
+        Frame2 = sendscript.Frame2;
     }
 
     // Update is called once per frame
