@@ -9,6 +9,7 @@ public class FrameScript : MonoBehaviour
     Vector3 screenToWorldPointPosition;
     GameObject frame;
     Transform ObTransform;
+    public GameObject MenuText;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,16 +21,22 @@ public class FrameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (MenuText.active)
         {
-            Mposition = Input.mousePosition;
-            Mposition.z = 20f;
-            screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(Mposition);
-            if (-14 <= screenToWorldPointPosition.x && screenToWorldPointPosition.x <= 6 && -9 <= screenToWorldPointPosition.y && screenToWorldPointPosition.y <= 11)
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                Obp.x = (Mathf.Ceil(screenToWorldPointPosition.x) + Mathf.Floor(screenToWorldPointPosition.x)) / 2;
-                Obp.y = (Mathf.Ceil(screenToWorldPointPosition.y) + Mathf.Floor(screenToWorldPointPosition.y)) / 2;
-                ObTransform.position = Obp;
+                Mposition = Input.mousePosition;
+                Mposition.z = 20f;
+                screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(Mposition);
+                if (-14 <= screenToWorldPointPosition.x && screenToWorldPointPosition.x <= 6 && -9 <= screenToWorldPointPosition.y && screenToWorldPointPosition.y <= 11)
+                {
+                    Obp.x = (Mathf.Ceil(screenToWorldPointPosition.x) + Mathf.Floor(screenToWorldPointPosition.x)) / 2;
+                    Obp.y = (Mathf.Ceil(screenToWorldPointPosition.y) + Mathf.Floor(screenToWorldPointPosition.y)) / 2;
+                    ObTransform.position = Obp;
+                }
             }
         }
     }

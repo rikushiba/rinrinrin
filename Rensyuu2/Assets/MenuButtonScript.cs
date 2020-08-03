@@ -6,11 +6,17 @@ using UnityEngine;
 public class MenuButtonScript : MonoBehaviour
 {
     public GameObject MenuText;
+    GameObject send;
+    SendScript ss;
 
     // Start is called before the first frame update
+    void Awake()
+    {
+        send = GameObject.Find("Send");
+    }
     void Start()
     {
-        
+        ss = send.GetComponent<SendScript>();
     }
 
     // Update is called once per frame
@@ -21,14 +27,15 @@ public class MenuButtonScript : MonoBehaviour
 
     public void onClickAct()
     {
-        Debug.Log("a");
         if (MenuText.active)
         {
             MenuText.SetActive(false);
+            ss.close.SetActive(false);
         }
         else
         {
             MenuText.SetActive(true);
+            ss.close.SetActive(true);
         }
     }
 }

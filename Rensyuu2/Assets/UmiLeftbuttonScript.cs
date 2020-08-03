@@ -5,6 +5,7 @@ using UnityEngine;
 public class UmiLeftbuttonScript : MonoBehaviour
 {
     GameObject frame;
+    public GameObject MenuText;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +19,20 @@ public class UmiLeftbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (frame.transform.position.x > -13)
+        if (MenuText.active)
         {
-            frame.transform.Translate(-1, 0, 0);
+
         }
         else
         {
-            frame.transform.Translate(0, 0, 0);
+            if (frame.transform.position.x > -13)
+            {
+                frame.transform.Translate(-1, 0, 0);
+            }
+            else
+            {
+                frame.transform.Translate(0, 0, 0);
+            }
         }
     }
 }
