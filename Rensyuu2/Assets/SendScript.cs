@@ -38,8 +38,8 @@ public class SendScript : MonoBehaviour
     public GameObject Close;
     public GameObject Select;
     public GameObject Menu;
-    Color SelectedTextColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
-    Color UnselectedTextColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+    public Color SelectedTextColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+    public Color UnselectedTextColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);
 
     // Start is called before the first frame update
     void Start()
