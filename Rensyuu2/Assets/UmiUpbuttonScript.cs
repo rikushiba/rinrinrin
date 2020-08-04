@@ -9,11 +9,11 @@ public class UmiUpbuttonScript : MonoBehaviour
     GameObject send;
     SendScript ss;
     GameObject frame;
-    int i = 0;
-    int Count;
-    GameObject[] MenuList = new GameObject[10] ;
+
     Text[] Menu = new Text[10];
+    Text[] Map = new Text[10];
     public GameObject MenuText;
+    public GameObject MapMenu;
 
     private void Awake()
     {
@@ -26,13 +26,8 @@ public class UmiUpbuttonScript : MonoBehaviour
 
         frame = GameObject.Find("frame");
 
-        Count = MenuText.transform.childCount;
-        while(Count > i)
-        {
-            MenuList[i] = MenuText.transform.GetChild(i).gameObject;
-            Menu[i] = MenuList[i].GetComponent<Text>();
-            i++;
-        }
+        Menu = ss.GetList(MenuText);
+        Map = ss.GetList(MapMenu);
     }
 
     // Update is called once per frame
@@ -44,25 +39,11 @@ public class UmiUpbuttonScript : MonoBehaviour
     {
         if (MenuText.active)
         {
-            i = 0;
-            while(Count > i)
-            {
-                if (Menu[i].color == ss.UnselectedTextColor){
-                }
-                else if(Menu[i].color == ss.SelectedTextColor) {
-                    Menu[i].color = ss.UnselectedTextColor;
-                    if (i < Count -1)
-                    {
-                        Menu[i + 1].color = ss.SelectedTextColor;
-                    }
-                    else
-                    {
-                        Menu[0].color = ss.SelectedTextColor;
-                    }
-                    break;
-                }
-                i++;
-            }
+            ss.UpList(Menu, MenuText);
+        }
+        else if (MapMenu.activeSelf)
+        {
+            ss.UpList(Map, MapMenu);
         }
         else
         {

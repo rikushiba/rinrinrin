@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
+using System.Threading;
+using UnityEngine.UI;
 public class SendScript : MonoBehaviour
 {
     public TileBase UmiTile;
@@ -40,6 +41,73 @@ public class SendScript : MonoBehaviour
     public GameObject Menu;
     public Color SelectedTextColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
     public Color UnselectedTextColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+
+    public Text[] GetList(GameObject ParentList)
+    {
+        int i=0;
+        int Count = ParentList.transform.childCount;
+        GameObject[] List = new GameObject[10];
+        Text[] ListText = new Text[10];
+        while (Count > i)
+        {
+            List[i] = ParentList.transform.GetChild(i).gameObject;
+            ListText[i] = List[i].GetComponent<Text>();
+            i++;
+        }
+        return ListText;
+    }
+
+    public void UpList(Text[] ListText, GameObject ParentList)
+    {
+        int i = 0;
+        int Count = ParentList.transform.childCount;
+        while (Count > i)
+        {
+            if (ListText[i].color == UnselectedTextColor)
+            {
+            }
+            else if (ListText[i].color == SelectedTextColor)
+            {
+                ListText[i].color = UnselectedTextColor;
+                if (i < Count - 1)
+                {
+                    ListText[i + 1].color =SelectedTextColor;
+                }
+                else
+                {
+                    ListText[0].color =SelectedTextColor;
+                }
+                break;
+            }
+            i++;
+        }
+    }
+
+    public void DownList(Text[] ListText, GameObject ParentList)
+    {
+        int i = 0;
+        int Count = ParentList.transform.childCount;
+        while (Count > i)
+        {
+            if (ListText[i].color == UnselectedTextColor)
+            {
+            }
+            else if (ListText[i].color == SelectedTextColor)
+            {
+                ListText[i].color = UnselectedTextColor;
+                if (i > 0)
+                {
+                    ListText[i - 1].color = SelectedTextColor;
+                }
+                else
+                {
+                    ListText[Count-1].color = SelectedTextColor;
+                }
+                break;
+            }
+            i++;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
