@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class OpenScript : MonoBehaviour
 {
-    public Tilemap KBmap;  
+    public Tilemap KBmap;
     public Tilemap KTmap;
     public GameObject KT;
     
@@ -15,17 +15,9 @@ public class OpenScript : MonoBehaviour
     GameObject Frame2;
 
     private void Awake()
-    {
-        KBmap = GetComponent<Tilemap>();
-        KTmap = GetComponent<Tilemap>();
+    {        
         send = GameObject.Find("Send");
-        
 
-        var KTpos = new Vector3Int(0, 0, 0);
-        Tile t = (Tile)KTmap.GetTile(KTpos);
-
-        var KBpos = new Vector3Int(1, 1, 0);
-        KBmap.SetTile(KBpos, t);
     }
 
 
@@ -44,9 +36,23 @@ public class OpenScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (KT && Close && Frame2.active)
+        if (KT && Close && Frame2.activeSelf)
         {
-            
+            Vector3 F2pos = GameObject.Find("frame2").transform.position;
+            Vector3Int KTpos = new Vector3Int();
+            KTpos.x = (int)F2pos.x - 1;
+            KTpos.y = (int)F2pos.y - 1;
+            KTpos.z = (int)F2pos.z;
+
+            Tile t = (Tile)KTmap.GetTile(KTpos);
+
+            Vector3 Fpos = GameObject.Find("frame").transform.position;
+            Vector3Int KBpos = new Vector3Int();
+            KBpos.x = Mathf.FloorToInt(Fpos.x) ;
+            KBpos.y = Mathf.FloorToInt(Fpos.y);
+            KBpos.z = (int)Fpos.z;
+
+            KBmap.SetTile(KBpos, t);
         }
         else
         {
