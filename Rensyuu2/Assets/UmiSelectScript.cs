@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UmiSelectScript : MonoBehaviour
@@ -48,11 +49,11 @@ public class UmiSelectScript : MonoBehaviour
         else if (MapMenu.activeSelf){
             if(YamaText.color == ss.SelectedTextColor)
             {
-
+                SceneManager.LoadScene("Ymascene");
             }
             else if(KyotenText.color == ss.SelectedTextColor)
             {
-
+                SceneManager.LoadSceneAsync("KyotenScene");
             }
         }
     }

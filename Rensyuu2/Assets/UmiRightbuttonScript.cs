@@ -19,7 +19,7 @@ public class UmiRightbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (MenuText.active)
+        if (MenuText.activeSelf)
         {
         
         }

@@ -37,7 +37,7 @@ public class UmiUpbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (MenuText.active)
+        if (MenuText.activeSelf)
         {
             ss.UpList(Menu, MenuText);
         }
