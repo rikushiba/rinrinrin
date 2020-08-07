@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class UmiSelectScript : MonoBehaviour
@@ -16,6 +18,9 @@ public class UmiSelectScript : MonoBehaviour
     Text KyotenText;
     GameObject send;
     SendScript ss;
+
+    public Tilemap UB;
+    TileBase t;
 
     void Awake()
     {
@@ -33,7 +38,7 @@ public class UmiSelectScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        t = UB.GetTile(ss.FposInt);
     }
 
     public void onClickAct()
@@ -54,6 +59,17 @@ public class UmiSelectScript : MonoBehaviour
             else if(KyotenText.color == ss.SelectedTextColor)
             {
                 SceneManager.LoadSceneAsync("KyotenScene");
+            }
+        }
+        else
+        {
+            if (t == ss.Rock || t == ss.Rock2 || t == ss.Rock3 || t == ss.Rock4 || t == ss.Rock5 || t == ss.Rock6)
+            {
+                UnityEngine.Debug.Log("a");
+            }
+            else if( t == ss.Tree || ss.Tree2 || ss.Tree3 || ss.Tree4 || ss.Tree5 || ss.Tree6 || ss.Tree7 || ss.Tree8)
+            {
+
             }
         }
     }

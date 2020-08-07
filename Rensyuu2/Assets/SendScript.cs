@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Threading;
 using UnityEngine.UI;
+using System.Numerics;
+
 public class SendScript : MonoBehaviour
 {
     public TileBase UmiTile;
@@ -41,6 +43,10 @@ public class SendScript : MonoBehaviour
     public GameObject Menu;
     public Color SelectedTextColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
     public Color UnselectedTextColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+
+    /*frameの座標を整数化したもの*/
+    public Vector3Int FposInt;
+    private UnityEngine.Vector3 Fpos;
 
     public Text[] GetList(GameObject ParentList)
     {
@@ -115,9 +121,13 @@ public class SendScript : MonoBehaviour
         
     }
 
+  
     // Update is called once per frame
     void Update()
     {
-        
+        Fpos = Frame.transform.position;
+        FposInt.x = Mathf.FloorToInt(Fpos.x);
+        FposInt.y = Mathf.FloorToInt(Fpos.y);
+        FposInt.z = (int)Fpos.z;
     }
 }
