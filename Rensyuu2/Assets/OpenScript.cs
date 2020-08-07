@@ -12,12 +12,19 @@ public class OpenScript : MonoBehaviour
     GameObject send;
     SendScript sendscript;
     GameObject Close;
+    GameObject Frame;
     GameObject Frame2;
+
+    Vector3 Fpos;
+    Vector3 F2pos;
+    Vector3Int KBpos;
+    Vector3Int KTpos;
+
+    TileBase t;
 
     private void Awake()
     {        
         send = GameObject.Find("Send");
-
     }
 
 
@@ -26,32 +33,48 @@ public class OpenScript : MonoBehaviour
     {
         sendscript = send.GetComponent<SendScript>();
         Close = sendscript.Close;
+        Frame = sendscript.Frame;
         Frame2 = sendscript.Frame2;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Fpos = Frame.transform.position;
+        KTpos = new Vector3Int();
+        KTpos.x = (int)F2pos.x - 1;
+        KTpos.y = (int)F2pos.y - 1;
+        KTpos.z = (int)F2pos.z;
+
+        F2pos = Frame2.transform.position;
+        KBpos = new Vector3Int();
+        KBpos.x = Mathf.FloorToInt(Fpos.x);
+        KBpos.y = Mathf.FloorToInt(Fpos.y);
+        KBpos.z = (int)Fpos.z;
+
+        t = KTmap.GetTile(KTpos);
     }
     public void onClickAct()
     {
         if (KT && Close && Frame2.activeSelf)
         {
-            Vector3 F2pos = GameObject.Find("frame2").transform.position;
-            Vector3Int KTpos = new Vector3Int();
-            KTpos.x = (int)F2pos.x - 1;
-            KTpos.y = (int)F2pos.y - 1;
-            KTpos.z = (int)F2pos.z;
+            //Vector3 F2pos = GameObject.Find("frame2").transform.position;
+            //Vector3Int KTpos = new Vector3Int();
+            //KTpos.x = (int)F2pos.x -1;
+            //KTpos.y = (int)F2pos.y -1;
+            //KTpos.z = (int)F2pos.z;    
 
-            Tile t = (Tile)KTmap.GetTile(KTpos);
+            //Tile t = (Tile)KTmap.GetTile(KTpos);
+            
+            //Vector3 Fpos = GameObject.Find("frame").transform.position;
+            //Vector3Int KBpos = new Vector3Int();
+            //KBpos.x = Mathf.FloorToInt(Fpos.x) ;
+            //KBpos.y = Mathf.FloorToInt(Fpos.y);
+            //KBpos.z = (int)Fpos.z;
 
-            Vector3 Fpos = GameObject.Find("frame").transform.position;
-            Vector3Int KBpos = new Vector3Int();
-            KBpos.x = Mathf.FloorToInt(Fpos.x) ;
-            KBpos.y = Mathf.FloorToInt(Fpos.y);
-            KBpos.z = (int)Fpos.z;
-
+            //KBmap.SetTile(KBpos, t);
+            
             KBmap.SetTile(KBpos, t);
         }
         else
