@@ -211,7 +211,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &185866685
 GameObject:
@@ -483,7 +483,7 @@ PrefabInstance:
     - target: {fileID: 7131016578614185410, guid: 0135898575994814a8e26b4d545bdbb1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7131016578614185410, guid: 0135898575994814a8e26b4d545bdbb1,
         type: 3}
@@ -600,7 +600,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &598268817
 MonoBehaviour:
@@ -757,7 +757,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &695272690
 MonoBehaviour:
@@ -914,7 +914,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!114 &718034742
 MonoBehaviour:
@@ -1078,7 +1078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330cc5a131c944b439bf1524c551842f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KBmap: {fileID: 1102012516}
+  KBamap: {fileID: 1418296097}
+  KBumap: {fileID: 1102012516}
   KTmap: {fileID: 185866689}
   KT: {fileID: 185866685}
 --- !u!212 &816635962
@@ -1189,7 +1190,7 @@ Transform:
   - {fileID: 1102012514}
   - {fileID: 185866686}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1018854640
 GameObject:
@@ -6153,7 +6154,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &1935954161
 MonoBehaviour:
@@ -6271,14 +6272,14 @@ MonoBehaviour:
   Iwaba2: {fileID: 0}
   Tsuchi: {fileID: 0}
   Tsuchi2: {fileID: 0}
-  Tree: {fileID: 0}
-  Tree2: {fileID: 0}
-  Tree3: {fileID: 0}
-  Tree4: {fileID: 0}
-  Tree5: {fileID: 0}
-  Tree6: {fileID: 0}
-  Tree7: {fileID: 0}
-  Tree8: {fileID: 0}
+  Tree: {fileID: 11400000, guid: bd895e6e4c24fbe49bf2f0b459d7fdbe, type: 2}
+  Tree2: {fileID: 11400000, guid: 68ec3cf2595b0814d88297dd4a4c6d11, type: 2}
+  Tree3: {fileID: 11400000, guid: 1c52ad884b8670745bf38dfa5fce7f74, type: 2}
+  Tree4: {fileID: 11400000, guid: acab92a9391c3e74a921ffc1ce97b8c6, type: 2}
+  Tree5: {fileID: 11400000, guid: 40cae8401eac28348b96592b59ffd3f9, type: 2}
+  Tree6: {fileID: 11400000, guid: 764e059f6c02b254f9e0e4870b947982, type: 2}
+  Tree7: {fileID: 11400000, guid: f65c7f37cf03afd4d9baaf540552ed68, type: 2}
+  Tree8: {fileID: 11400000, guid: acab92a9391c3e74a921ffc1ce97b8c6, type: 2}
   Rock: {fileID: 0}
   Rock2: {fileID: 0}
   Rock3: {fileID: 0}
@@ -6371,7 +6372,7 @@ PrefabInstance:
     - target: {fileID: 7131016578614185410, guid: 0135898575994814a8e26b4d545bdbb1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7131016578614185410, guid: 0135898575994814a8e26b4d545bdbb1,
         type: 3}
