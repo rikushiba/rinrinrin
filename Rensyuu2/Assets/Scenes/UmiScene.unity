@@ -6008,8 +6008,8 @@ MonoBehaviour:
   MenuText: {fileID: 128111609}
   MapMenu: {fileID: 1163285576}
   Map: {fileID: 541427338}
-  Yama: {fileID: 0}
-  Kyoten: {fileID: 0}
+  Yama: {fileID: 1685370781}
+  Kyoten: {fileID: 2016436198}
 --- !u!1 &1483803877
 GameObject:
   m_ObjectHideFlags: 0
