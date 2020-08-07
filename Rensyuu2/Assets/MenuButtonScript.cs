@@ -6,6 +6,7 @@ using UnityEngine;
 public class MenuButtonScript : MonoBehaviour
 {
     public GameObject MenuText;
+    public GameObject MapMenu;
     GameObject send;
     SendScript ss;
 
@@ -27,8 +28,9 @@ public class MenuButtonScript : MonoBehaviour
 
     public void onClickAct()
     {
-        if (MenuText.active)
+        if (MenuText.activeSelf || MapMenu.activeSelf)
         {
+            MapMenu.SetActive(false);
             MenuText.SetActive(false);
             ss.Close.SetActive(false);
         }

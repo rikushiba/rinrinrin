@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Ymascene.unity
+    guid: 09e5b1e69355e7e45b092e585bcc3fba
+  - enabled: 1
+    path: Assets/Scenes/KyotenScene.unity
+    guid: 08ea6b608ed1728449ca92386f6a9677
+  - enabled: 1
+    path: Assets/Scenes/UmiScene.unity
+    guid: 558c1adcfd6dac24c99cda228ec52533
   m_configObjects: {}

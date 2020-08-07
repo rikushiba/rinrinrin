@@ -5,6 +5,7 @@ using UnityEngine;
 public class UmiCloseScript : MonoBehaviour
 {
     public GameObject MenuText;
+    public GameObject MapMenu;
     GameObject send;
     SendScript ss;
 
@@ -25,8 +26,9 @@ public class UmiCloseScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (MenuText.active)
+        if (MenuText.activeSelf || MapMenu.activeSelf)
         {
+            MapMenu.SetActive(false);
             MenuText.SetActive(false);
             ss.Close.SetActive(false);
         }
