@@ -20,7 +20,7 @@ public class UpbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (frame2.active)
+        if (frame2.activeSelf)
         {
             if (frame2.transform.position.y < -7)
             {

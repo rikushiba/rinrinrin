@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -17,6 +18,7 @@ public class OpenScript : MonoBehaviour
 
     Vector3 Fpos;
     Vector3 F2pos;
+    Vector3 F2pos2;
     Vector3Int KBpos;
     Vector3Int KTpos;
 
@@ -41,13 +43,17 @@ public class OpenScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Fpos = Frame.transform.position;
-        KTpos = new Vector3Int();
-        KTpos.x = (int)F2pos.x - 1;
-        KTpos.y = (int)F2pos.y - 1;
-        KTpos.z = (int)F2pos.z;
-
         F2pos = Frame2.transform.position;
+        F2pos2 = F2pos * 0.5f; 
+        //F2posの座標を半分にする
+
+        KTpos = new Vector3Int();
+        KTpos.x = Mathf.FloorToInt(F2pos2.x);
+        KTpos.y = Mathf.FloorToInt(F2pos2.y);
+        KTpos.z = (int)F2pos2.z;
+        //F2pos2の座標を切り捨て
+
+        Fpos = Frame.transform.position;
         KBpos = new Vector3Int();
         KBpos.x = Mathf.FloorToInt(Fpos.x);
         KBpos.y = Mathf.FloorToInt(Fpos.y);
@@ -58,23 +64,7 @@ public class OpenScript : MonoBehaviour
     public void onClickAct()
     {
         if (KT && Close && Frame2.activeSelf)
-        {
-            //Vector3 F2pos = GameObject.Find("frame2").transform.position;
-            //Vector3Int KTpos = new Vector3Int();
-            //KTpos.x = (int)F2pos.x -1;
-            //KTpos.y = (int)F2pos.y -1;
-            //KTpos.z = (int)F2pos.z;    
-
-            //Tile t = (Tile)KTmap.GetTile(KTpos);
-            
-            //Vector3 Fpos = GameObject.Find("frame").transform.position;
-            //Vector3Int KBpos = new Vector3Int();
-            //KBpos.x = Mathf.FloorToInt(Fpos.x) ;
-            //KBpos.y = Mathf.FloorToInt(Fpos.y);
-            //KBpos.z = (int)Fpos.z;
-
-            //KBmap.SetTile(KBpos, t);
-            
+        {               
             KBmap.SetTile(KBpos, t);
         }
         else

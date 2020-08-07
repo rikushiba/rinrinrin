@@ -22,7 +22,7 @@ public class RightbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (frame2.active)
+        if (frame2.activeSelf)
         {
             if (frame2.transform.position.x < 9)
             {
