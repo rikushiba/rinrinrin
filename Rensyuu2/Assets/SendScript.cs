@@ -36,6 +36,9 @@ public class SendScript : MonoBehaviour
     public TileBase Rock5;
     public TileBase Rock6;
 
+    public GameObject Tenkuu;
+    public GameObject MessageText;
+
     public GameObject Frame;
     public GameObject Frame2;
     public GameObject Close;
@@ -47,6 +50,10 @@ public class SendScript : MonoBehaviour
     /*frameの座標を整数化したもの*/
     public Vector3Int FposInt;
     private UnityEngine.Vector3 Fpos;
+
+    /*木、岩を除去するために必要な費用*/
+    public int RemoveTreeCost = 100;
+    public int RemoveRockCost = 100;
 
     public Text[] GetList(GameObject ParentList)
     {

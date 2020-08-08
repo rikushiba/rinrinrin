@@ -1988,6 +1988,9 @@ MonoBehaviour:
   Menu: {fileID: 1129509108}
   SelectedTextColor: {r: 1, g: 0, b: 0, a: 1}
   UnselectedTextColor: {r: 0, g: 0, b: 0, a: 1}
+  FposInt: {x: 0, y: 0, z: 0}
+  RemoveTreeCost: 100
+  RemoveRockCost: 100
 --- !u!4 &1292042364
 Transform:
   m_ObjectHideFlags: 0
@@ -6010,6 +6013,7 @@ MonoBehaviour:
   Map: {fileID: 541427338}
   Yama: {fileID: 1685370781}
   Kyoten: {fileID: 2016436198}
+  UB: {fileID: 2021995587}
 --- !u!1 &1483803877
 GameObject:
   m_ObjectHideFlags: 0

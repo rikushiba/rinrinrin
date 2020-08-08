@@ -65,7 +65,7 @@ public class UmiSelectScript : MonoBehaviour
         {
             if (t == ss.Rock || t == ss.Rock2 || t == ss.Rock3 || t == ss.Rock4 || t == ss.Rock5 || t == ss.Rock6)
             {
-                UnityEngine.Debug.Log("a");
+                
             }
             else if( t == ss.Tree || ss.Tree2 || ss.Tree3 || ss.Tree4 || ss.Tree5 || ss.Tree6 || ss.Tree7 || ss.Tree8)
             {
