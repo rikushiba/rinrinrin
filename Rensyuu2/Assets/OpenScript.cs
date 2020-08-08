@@ -6,12 +6,13 @@ using UnityEngine.Tilemaps;
 
 public class OpenScript : MonoBehaviour
 {
-    public Tilemap KBmap;
+    public Tilemap KBamap;
+    public Tilemap KBumap;
     public Tilemap KTmap;
     public GameObject KT;
     
     GameObject send;
-    SendScript sendscript;
+    SendScript ss;
     GameObject Close;
     GameObject Frame;
     GameObject Frame2;
@@ -23,6 +24,22 @@ public class OpenScript : MonoBehaviour
     Vector3Int KTpos;
 
     TileBase t;
+    TileBase pret1;
+    TileBase pret2;
+    TileBase Tree;
+    TileBase Tree2;
+    TileBase Tree3;
+    TileBase Tree4;
+    TileBase Tree5;
+    TileBase Tree6;
+    TileBase Tree7;
+    TileBase Tree8;
+    TileBase Rock;
+    TileBase Rock2;
+    TileBase Rock3;
+    TileBase Rock4;
+    TileBase Rock5;
+    TileBase Rock6;
 
     private void Awake()
     {        
@@ -33,11 +50,24 @@ public class OpenScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sendscript = send.GetComponent<SendScript>();
-        Close = sendscript.Close;
-        Frame = sendscript.Frame;
-        Frame2 = sendscript.Frame2;
-
+        ss = send.GetComponent<SendScript>();
+        Close = ss.Close;
+        Frame = ss.Frame;
+        Frame2 = ss.Frame2;
+        Tree = ss.Tree;
+        Tree2 = ss.Tree2;
+        Tree3 = ss.Tree3;
+        Tree4 = ss.Tree4;
+        Tree5 = ss.Tree5;
+        Tree6 = ss.Tree6;
+        Tree7 = ss.Tree7;
+        Tree8 = ss.Tree8;
+        Rock = ss.Rock;
+        Rock2 = ss.Rock2;
+        Rock3 = ss.Rock3;
+        Rock4 = ss.Rock4;
+        Rock5 = ss.Rock5;
+        Rock6 = ss.Rock6;
     }
 
     // Update is called once per frame
@@ -60,12 +90,21 @@ public class OpenScript : MonoBehaviour
         KBpos.z = (int)Fpos.z;
 
         t = KTmap.GetTile(KTpos);
+        pret1 = KBumap.GetTile(KBpos);
+        pret2 = KBamap.GetTile(KBpos);
     }
     public void onClickAct()
     {
         if (KT && Close && Frame2.activeSelf)
-        {               
-            KBmap.SetTile(KBpos, t);
+        {
+            //if (pret1 == Tree || Tree2 || Tree3 || Tree4 || Tree5 || Tree6 || Tree7 || Tree8 || Rock || Rock2 || Rock3 || Rock4 || Rock5 || Rock6)
+            
+
+            
+            //else
+            
+                KBumap.SetTile(KBpos, t);
+            
         }
         else
         {
