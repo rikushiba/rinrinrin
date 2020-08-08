@@ -9,10 +9,17 @@ public class FrameScript : MonoBehaviour
     Vector3 screenToWorldPointPosition;
     GameObject frame;
     Transform ObTransform;
-    public GameObject MenuText;
+    GameObject send;
+    SendScript ss;
+
+    void Awake()
+    {
+        send = GameObject.Find("Send");
+    }
     // Start is called before the first frame update
     void Start()
     {
+        ss = send.GetComponent<SendScript>();
         frame = GameObject.Find("frame");
         ObTransform = this.transform;
         Obp = ObTransform.position;
@@ -21,7 +28,7 @@ public class FrameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MenuText.active)
+        if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf || ss.Yes.activeSelf || ss.No.activeSelf)
         {
         }
         else

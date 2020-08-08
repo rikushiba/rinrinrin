@@ -16,6 +16,9 @@ public class UmiSelectScript : MonoBehaviour
     Text MapText;
     Text YamaText;
     Text KyotenText;
+    Text MText;
+    Text YText;
+    Text NText;
     GameObject send;
     SendScript ss;
 
@@ -33,6 +36,9 @@ public class UmiSelectScript : MonoBehaviour
         MapText = Map.GetComponent<Text>();
         YamaText = Yama.GetComponent<Text>();
         KyotenText = Kyoten.GetComponent<Text>();
+        MText = ss.MessageText.GetComponent<Text>();
+        YText = ss.Yes.GetComponent<Text>();
+        NText = ss.No.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -51,25 +57,43 @@ public class UmiSelectScript : MonoBehaviour
                 MapMenu.SetActive(true);
             }
         }
-        else if (MapMenu.activeSelf){
-            if(YamaText.color == ss.SelectedTextColor)
+        else if (MapMenu.activeSelf) {
+            if (YamaText.color == ss.SelectedTextColor)
             {
                 SceneManager.LoadScene("Ymascene");
             }
-            else if(KyotenText.color == ss.SelectedTextColor)
+            else if (KyotenText.color == ss.SelectedTextColor)
             {
                 SceneManager.LoadSceneAsync("KyotenScene");
             }
+        }
+        else if (ss.Key == 1)
+        {
+            if(YText.color == ss.SelectedTextColor) {}
+            else if(NText.color == ss.SelectedTextColor) { }
+        }
+        else if (ss.Key == 2)
+        {
+            if (YText.color == ss.SelectedTextColor) { }
+            else if (NText.color == ss.SelectedTextColor) { }
         }
         else
         {
             if (t == ss.Rock || t == ss.Rock2 || t == ss.Rock3 || t == ss.Rock4 || t == ss.Rock5 || t == ss.Rock6)
             {
-                
+                ss.Key = 1;/*if分岐に使う*/
+                MText.text = ss.RemoveRockCost.ToString("d") +"円で岩を除去しますか？";
+                ss.Yes.SetActive(true);
+                ss.No.SetActive(true);
+                ss.Close.SetActive(true);
             }
             else if( t == ss.Tree || ss.Tree2 || ss.Tree3 || ss.Tree4 || ss.Tree5 || ss.Tree6 || ss.Tree7 || ss.Tree8)
             {
-
+                ss.Key = 2;/*if分岐に使う*/
+                MText.text = ss.RemoveTreeCost.ToString("d") + "円で木を除去しますか？";
+                ss.Yes.SetActive(true);
+                ss.No.SetActive(true);
+                ss.Close.SetActive(true);
             }
         }
     }

@@ -8,6 +8,8 @@ using System.Numerics;
 
 public class SendScript : MonoBehaviour
 {
+    public int Key=0; /*条件分岐に使う*/
+
     public TileBase UmiTile;
     public TileBase UmiTile2;
     public TileBase Nohara;
@@ -37,7 +39,12 @@ public class SendScript : MonoBehaviour
     public TileBase Rock6;
 
     public GameObject Tenkuu;
+    public GameObject MenuText;
+    public GameObject MapMenu;
     public GameObject MessageText;
+    public GameObject Yes;
+    public GameObject No;
+
 
     public GameObject Frame;
     public GameObject Frame2;
@@ -70,6 +77,21 @@ public class SendScript : MonoBehaviour
         return ListText;
     }
 
+    public void YesOrNo()
+    {
+        Text NT = No.GetComponent<Text>();
+        Text YT = Yes.GetComponent<Text>();
+        if(YT.color == SelectedTextColor) 
+        { 
+            YT.color = UnselectedTextColor;
+            NT.color = SelectedTextColor;
+        }
+        else
+        {
+            NT.color = UnselectedTextColor;
+            YT.color = SelectedTextColor;
+        }
+    }
     public void UpList(Text[] ListText, GameObject ParentList)
     {
         int i = 0;

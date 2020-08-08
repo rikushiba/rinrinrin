@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UmiCloseScript : MonoBehaviour
 {
-    public GameObject MenuText;
-    public GameObject MapMenu;
     GameObject send;
     SendScript ss;
+    Text MText;
 
     void Awake()
     {
@@ -17,6 +18,7 @@ public class UmiCloseScript : MonoBehaviour
     void Start()
     {
         ss = send.GetComponent<SendScript>();
+        MText = ss.MessageText.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -26,11 +28,15 @@ public class UmiCloseScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (MenuText.activeSelf || MapMenu.activeSelf)
+        if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf || ss.Yes.activeSelf || ss.No.activeSelf)
         {
-            MapMenu.SetActive(false);
-            MenuText.SetActive(false);
+            ss.MapMenu.SetActive(false);
+            ss.MenuText.SetActive(false);
             ss.Close.SetActive(false);
+            ss.No.SetActive(false);
+            ss.Yes.SetActive(false);
+            ss.Key = 0;
+            MText.text = "";
         }
         else
         {
