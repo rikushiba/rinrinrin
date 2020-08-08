@@ -7,12 +7,28 @@ public class KyotenFrameScript : MonoBehaviour
     Vector3 Mposition;
     Vector3 Obp;
     Vector3 screenToWorldPointPosition;
-    GameObject frame;
+
+    GameObject send;
+    SendScript ss;
+    GameObject Close;
+    GameObject Frame;
+    GameObject Frame2;
+    GameObject KT;
     Transform ObTransform;
+
+    private void Awake()
+    {
+        send = GameObject.Find("Send");
+    }
     // Start is called before the first frame update
     void Start()
     {
-        frame = GameObject.Find("frame");
+        ss = send.GetComponent<SendScript>();
+        Close = ss.Close;
+        Frame = ss.Frame;
+        Frame2 = ss.Frame2;
+        KT = ss.Tenkuu;
+
         ObTransform = this.transform;
         Obp = ObTransform.position;
     }
@@ -20,16 +36,23 @@ public class KyotenFrameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (KT && Close && Frame2.activeSelf)
         {
-            Mposition = Input.mousePosition;
-            Mposition.z = 20f;
-            screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(Mposition);
-            if (-10 <= screenToWorldPointPosition.x && screenToWorldPointPosition.x <= 10 && -10 <= screenToWorldPointPosition.y && screenToWorldPointPosition.y <= 10)
+
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                Obp.x = (Mathf.Ceil(screenToWorldPointPosition.x) + Mathf.Floor(screenToWorldPointPosition.x)) / 2;
-                Obp.y = (Mathf.Ceil(screenToWorldPointPosition.y) + Mathf.Floor(screenToWorldPointPosition.y)) / 2;
-                ObTransform.position = Obp;
+                Mposition = Input.mousePosition;
+                Mposition.z = 20f;
+                screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(Mposition);
+                if (-10 <= screenToWorldPointPosition.x && screenToWorldPointPosition.x <= 10 && -10 <= screenToWorldPointPosition.y && screenToWorldPointPosition.y <= 10)
+                {
+                    Obp.x = (Mathf.Ceil(screenToWorldPointPosition.x) + Mathf.Floor(screenToWorldPointPosition.x)) / 2;
+                    Obp.y = (Mathf.Ceil(screenToWorldPointPosition.y) + Mathf.Floor(screenToWorldPointPosition.y)) / 2;
+                    ObTransform.position = Obp;
+                }
             }
         }
     }

@@ -9,13 +9,13 @@ public class OpenScript : MonoBehaviour
     public Tilemap KBamap;
     public Tilemap KBumap;
     public Tilemap KTmap;
-    public GameObject KT;
     
     GameObject send;
     SendScript ss;
     GameObject Close;
     GameObject Frame;
     GameObject Frame2;
+    GameObject KT;
 
     Vector3 Fpos;
     Vector3 F2pos;
@@ -40,6 +40,12 @@ public class OpenScript : MonoBehaviour
     TileBase Rock4;
     TileBase Rock5;
     TileBase Rock6;
+    TileBase UmiTile;
+    TileBase UmiTile2;
+    TileBase DN;
+    TileBase DN2;
+    TileBase Beach;
+    TileBase Beach2;
 
     private void Awake()
     {        
@@ -54,6 +60,7 @@ public class OpenScript : MonoBehaviour
         Close = ss.Close;
         Frame = ss.Frame;
         Frame2 = ss.Frame2;
+        KT = ss.Tenkuu;
         Tree = ss.Tree;
         Tree2 = ss.Tree2;
         Tree3 = ss.Tree3;
@@ -68,6 +75,12 @@ public class OpenScript : MonoBehaviour
         Rock4 = ss.Rock4;
         Rock5 = ss.Rock5;
         Rock6 = ss.Rock6;
+        UmiTile = ss.UmiTile;
+        UmiTile2 = ss.UmiTile2;
+        DN = ss.DarkNohara;
+        DN2 = ss.DarkNohara2;
+        Beach = ss.Beach;
+        Beach2 = ss.Beach2;
     }
 
     // Update is called once per frame
@@ -92,19 +105,32 @@ public class OpenScript : MonoBehaviour
         t = KTmap.GetTile(KTpos);
         pret1 = KBumap.GetTile(KBpos);
         pret2 = KBamap.GetTile(KBpos);
+        
     }
     public void onClickAct()
     {
         if (KT && Close && Frame2.activeSelf)
         {
-            //if (pret1 == Tree || Tree2 || Tree3 || Tree4 || Tree5 || Tree6 || Tree7 || Tree8 || Rock || Rock2 || Rock3 || Rock4 || Rock5 || Rock6)
-            
+           // if (pret1 == Tree || pret1 == Tree2 || 
+            //pret1 == Tree3 || pret1 == Tree4 || pret1 == Tree5 || 
+            //pret1 == Tree6 || pret1 == Tree7 || pret1 == Tree8 ||
+            //pret1 == Rock || pret1 == Rock2 || pret1 == Rock3 ||
+            //pret1 == Rock4 || pret1 == Rock5 || pret1 == Rock6)
+            //一応タイルごとに書いたけど使わないかも           
+            if ( KBumap.HasTile(KBpos) )
+            {
+                
+            }
+            else if ( pret2 == UmiTile || pret2 == UmiTile2 ||
+                pret2 == DN || pret2 == DN2 || pret2 == Beach ||
+                pret2 == Beach2 )
+            {
 
-            
-            //else
-            
+            }
+            else
+            {
                 KBumap.SetTile(KBpos, t);
-            
+            }
         }
         else
         {

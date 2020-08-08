@@ -230,7 +230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &185866686
 Transform:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ PrefabInstance:
     - target: {fileID: 6903780302996954877, guid: 0135898575994814a8e26b4d545bdbb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7131016578614185410, guid: 0135898575994814a8e26b4d545bdbb1,
         type: 3}
@@ -1081,7 +1081,6 @@ MonoBehaviour:
   KBamap: {fileID: 1418296097}
   KBumap: {fileID: 1102012516}
   KTmap: {fileID: 185866689}
-  KT: {fileID: 185866685}
 --- !u!212 &816635962
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4694,8 +4693,8 @@ Tilemap:
   - first: {x: -6, y: 4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4703,8 +4702,8 @@ Tilemap:
   - first: {x: -5, y: 4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4721,8 +4720,8 @@ Tilemap:
   - first: {x: -3, y: 4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4730,8 +4729,8 @@ Tilemap:
   - first: {x: -2, y: 4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4739,8 +4738,8 @@ Tilemap:
   - first: {x: -1, y: 4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4883,8 +4882,8 @@ Tilemap:
   - first: {x: -5, y: 5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4892,8 +4891,8 @@ Tilemap:
   - first: {x: -4, y: 5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4901,8 +4900,8 @@ Tilemap:
   - first: {x: -3, y: 5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4919,8 +4918,8 @@ Tilemap:
   - first: {x: -1, y: 5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5741,10 +5740,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c27b0441c5f093747b2c14915acda9c9, type: 2}
   - m_RefCount: 234
     m_Data: {fileID: 11400000, guid: e5d86dc1a81aacb449a005ebfdab74e2, type: 2}
-  - m_RefCount: 11
-    m_Data: {fileID: 11400000, guid: dbe45f5f83cf3be4cb33904a151b53a3, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 1f0071c0454810741ad47d24b081f726, type: 2}
+  - m_RefCount: 9
+    m_Data: {fileID: 11400000, guid: 4e65bd412d8ec6643af1188385c055d0, type: 2}
   - m_RefCount: 44
     m_Data: {fileID: 11400000, guid: f56a2c7a9dd5f3b4ca5955677ea60dae, type: 2}
   - m_RefCount: 35
@@ -5758,11 +5757,12 @@ Tilemap:
   - m_RefCount: 234
     m_Data: {fileID: -3314271785575527403, guid: 646c37deb51a1ef46a0200195da7dccc,
       type: 3}
-  - m_RefCount: 11
-    m_Data: {fileID: -9130879439924087061, guid: 646c37deb51a1ef46a0200195da7dccc,
+  - m_RefCount: 2
+    m_Data: {fileID: 7926011746399687880, guid: c0247529d2270a540bcc8a2ddde4d9b9,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 9
+    m_Data: {fileID: -9130879439924087061, guid: c0247529d2270a540bcc8a2ddde4d9b9,
+      type: 3}
   - m_RefCount: 44
     m_Data: {fileID: 3666909368989234659, guid: 4e5653bc21772da4ba7d851ae8937fb5,
       type: 3}
@@ -5837,7 +5837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!60 &1449302301
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6260,14 +6260,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8852dc55f67a074a9530d0a83cdd3ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UmiTile: {fileID: 0}
-  UmiTile2: {fileID: 0}
+  UmiTile: {fileID: 11400000, guid: c27b0441c5f093747b2c14915acda9c9, type: 2}
+  UmiTile2: {fileID: 11400000, guid: 0a9d2f0b68749c5488c799b51e069264, type: 2}
   Nohara: {fileID: 0}
   Nohara2: {fileID: 0}
-  DarkNohara: {fileID: 0}
-  DarkNohara2: {fileID: 0}
-  Beach: {fileID: 0}
-  Beach2: {fileID: 0}
+  DarkNohara: {fileID: 11400000, guid: f56a2c7a9dd5f3b4ca5955677ea60dae, type: 2}
+  DarkNohara2: {fileID: 11400000, guid: 6a7ec0ada30274a439d387e2a32162ef, type: 2}
+  Beach: {fileID: 11400000, guid: 4e65bd412d8ec6643af1188385c055d0, type: 2}
+  Beach2: {fileID: 11400000, guid: 1f0071c0454810741ad47d24b081f726, type: 2}
   Iwaba: {fileID: 0}
   Iwaba2: {fileID: 0}
   Tsuchi: {fileID: 0}
@@ -6279,13 +6279,15 @@ MonoBehaviour:
   Tree5: {fileID: 11400000, guid: 40cae8401eac28348b96592b59ffd3f9, type: 2}
   Tree6: {fileID: 11400000, guid: 764e059f6c02b254f9e0e4870b947982, type: 2}
   Tree7: {fileID: 11400000, guid: f65c7f37cf03afd4d9baaf540552ed68, type: 2}
-  Tree8: {fileID: 11400000, guid: acab92a9391c3e74a921ffc1ce97b8c6, type: 2}
-  Rock: {fileID: 0}
-  Rock2: {fileID: 0}
-  Rock3: {fileID: 0}
-  Rock4: {fileID: 0}
-  Rock5: {fileID: 0}
-  Rock6: {fileID: 0}
+  Tree8: {fileID: 11400000, guid: 258d39ede07bbc94c91311c1e0f71357, type: 2}
+  Rock: {fileID: 11400000, guid: d30b24cf1b5b9c342afd5922ea00e078, type: 2}
+  Rock2: {fileID: 11400000, guid: a6d9441d2097c484e9f563d397b04364, type: 2}
+  Rock3: {fileID: 11400000, guid: 1607cc5258f010245b543e1b48dccf4f, type: 2}
+  Rock4: {fileID: 11400000, guid: 71294cdaa3e5dc74daf2525a035f31f6, type: 2}
+  Rock5: {fileID: 11400000, guid: d82eb810e9a185549ad3917c1867305c, type: 2}
+  Rock6: {fileID: 11400000, guid: 5e484e6ef4ae24541a07ee303bb9e550, type: 2}
+  Tenkuu: {fileID: 185866685}
+  MessageText: {fileID: 0}
   Frame: {fileID: 1238697981}
   Frame2: {fileID: 1128373754}
   Close: {fileID: 1449302300}
@@ -6293,6 +6295,9 @@ MonoBehaviour:
   Menu: {fileID: 0}
   SelectedTextColor: {r: 1, g: 0, b: 0, a: 1}
   UnselectedTextColor: {r: 0, g: 0, b: 0, a: 1}
+  FposInt: {x: 0, y: 0, z: 0}
+  RemoveTreeCost: 100
+  RemoveRockCost: 100
 --- !u!4 &2127316261
 Transform:
   m_ObjectHideFlags: 0
