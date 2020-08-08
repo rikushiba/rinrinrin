@@ -5,10 +5,16 @@ using UnityEngine;
 public class UmiLeftbuttonScript : MonoBehaviour
 {
     GameObject frame;
-    public GameObject MenuText;
+    GameObject send;
+    SendScript ss;
+    void Awake()
+    {
+        send = GameObject.Find("Send");
+    }
     // Start is called before the first frame update
     void Start()
     {
+        ss = send.GetComponent<SendScript>();
         frame = GameObject.Find("frame");
     }
 
@@ -19,9 +25,13 @@ public class UmiLeftbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (MenuText.activeSelf)
+        if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf)
         {
 
+        }
+        else if (ss.Yes.activeSelf)
+        {
+            ss.YesOrNo();
         }
         else
         {
