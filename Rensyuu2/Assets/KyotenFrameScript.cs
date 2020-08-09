@@ -36,7 +36,7 @@ public class KyotenFrameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (KT && Close && Frame2.activeSelf)
+        if (Close.activeSelf)
         {
 
         }

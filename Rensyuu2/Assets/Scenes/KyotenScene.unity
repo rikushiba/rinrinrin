@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 261423858}
   - component: {fileID: 261423860}
   - component: {fileID: 261423859}
+  - component: {fileID: 261423861}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -516,6 +517,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261423857}
   m_CullTransparentMesh: 0
+--- !u!114 &261423861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261423857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1956e7780e12e4d45bcd9e5023ba228b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &466655809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,6 +1513,7 @@ GameObject:
   - component: {fileID: 828315273}
   - component: {fileID: 828315275}
   - component: {fileID: 828315274}
+  - component: {fileID: 828315276}
   m_Layer: 5
   m_Name: Building
   m_TagString: Untagged
@@ -1567,6 +1581,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828315272}
   m_CullTransparentMesh: 0
+--- !u!114 &828315276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828315272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107cb8c1c24cc68418427787086f6edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &913670403
 GameObject:
   m_ObjectHideFlags: 0
@@ -7535,16 +7561,16 @@ MonoBehaviour:
   Key: 0
   UmiTile: {fileID: 11400000, guid: c27b0441c5f093747b2c14915acda9c9, type: 2}
   UmiTile2: {fileID: 11400000, guid: 0a9d2f0b68749c5488c799b51e069264, type: 2}
-  Nohara: {fileID: 0}
-  Nohara2: {fileID: 0}
+  Nohara: {fileID: 11400000, guid: e5d86dc1a81aacb449a005ebfdab74e2, type: 2}
+  Nohara2: {fileID: 11400000, guid: e68f280a14cecfc48a868377ddc550be, type: 2}
   DarkNohara: {fileID: 11400000, guid: f56a2c7a9dd5f3b4ca5955677ea60dae, type: 2}
   DarkNohara2: {fileID: 11400000, guid: 6a7ec0ada30274a439d387e2a32162ef, type: 2}
   Beach: {fileID: 11400000, guid: 4e65bd412d8ec6643af1188385c055d0, type: 2}
   Beach2: {fileID: 11400000, guid: 1f0071c0454810741ad47d24b081f726, type: 2}
-  Iwaba: {fileID: 0}
-  Iwaba2: {fileID: 0}
-  Tsuchi: {fileID: 0}
-  Tsuchi2: {fileID: 0}
+  Iwaba: {fileID: 11400000, guid: 6830f7ae0c2a59d49944d5a3168e58ca, type: 2}
+  Iwaba2: {fileID: 11400000, guid: 1501cb92fe7e9a6418459148528f70c8, type: 2}
+  Tsuchi: {fileID: 11400000, guid: e14e14a186880e246be0195845a05bde, type: 2}
+  Tsuchi2: {fileID: 11400000, guid: b8d637865768bac43abda7eb847fd30b, type: 2}
   Tree: {fileID: 11400000, guid: bd895e6e4c24fbe49bf2f0b459d7fdbe, type: 2}
   Tree2: {fileID: 11400000, guid: 68ec3cf2595b0814d88297dd4a4c6d11, type: 2}
   Tree3: {fileID: 11400000, guid: 1c52ad884b8670745bf38dfa5fce7f74, type: 2}
@@ -7565,8 +7591,8 @@ MonoBehaviour:
   House4: {fileID: 11400000, guid: bf870c1ccd8d21a46978f2be3f4bcbb9, type: 2}
   House5: {fileID: 11400000, guid: 6e3edc54d76b099429bbd3f5fe510c94, type: 2}
   Tenkuu: {fileID: 185866685}
-  Background: {fileID: 0}
-  Building: {fileID: 0}
+  Background: {fileID: 1418296094}
+  Building: {fileID: 1102012513}
   MenuText: {fileID: 1494321168}
   MapMenu: {fileID: 1453896608}
   MessageText: {fileID: 2099354888}
