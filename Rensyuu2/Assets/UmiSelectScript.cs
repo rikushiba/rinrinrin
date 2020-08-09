@@ -100,7 +100,7 @@ public class UmiSelectScript : MonoBehaviour
                 SceneManager.LoadSceneAsync("KyotenScene");
             }
         }
-        else if (ss.Tenkuu && ss.Frame2 && ss.Close.activeSelf)
+        else if (ss.Tenkuu.activeSelf && ss.Frame2.activeSelf && ss.Close.activeSelf)
         {
             if (UBumap.HasTile(ss.FposInt))
             {
