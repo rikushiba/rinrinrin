@@ -301,11 +301,38 @@ Tilemap:
   m_GameObject: {fileID: 185866685}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: -2, y: -4, z: 0}
+  - first: {x: -3, y: -4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 11
-      m_TileSpriteIndex: 11
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -1, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 1, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 9
+      m_TileSpriteIndex: 8
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 3, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 8
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -326,16 +353,16 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: ad446a974495d1049931b4073e98edd8, type: 2}
+    m_Data: {fileID: 11400000, guid: 895a86720c8b8a646862e17414685a0a, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 0197df671dc8e204c85a1c9dda38700a, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: ff9e6f542ffed4644a07283037642afd, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 8bc9bf257c63b774380787d8aa0ec84c, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -351,19 +378,22 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 9166424852326620884, guid: 646c37deb51a1ef46a0200195da7dccc,
+    m_Data: {fileID: 2964807904940490486, guid: 646c37deb51a1ef46a0200195da7dccc,
       type: 3}
-  m_TileMatrixArray:
   - m_RefCount: 1
+    m_Data: {fileID: 2741450952487453666, guid: 646c37deb51a1ef46a0200195da7dccc,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1036317019091617459, guid: 646c37deb51a1ef46a0200195da7dccc,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 8800132779941010527, guid: 646c37deb51a1ef46a0200195da7dccc,
+      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 4
     m_Data:
       e00: 1
       e01: 0
@@ -382,7 +412,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 1
+  - m_RefCount: 4
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -448,7 +478,7 @@ PrefabInstance:
     - target: {fileID: 7131016578614185410, guid: 0135898575994814a8e26b4d545bdbb1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7131016578614185410, guid: 0135898575994814a8e26b4d545bdbb1,
         type: 3}
@@ -6260,6 +6290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8852dc55f67a074a9530d0a83cdd3ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Key: 0
   UmiTile: {fileID: 11400000, guid: c27b0441c5f093747b2c14915acda9c9, type: 2}
   UmiTile2: {fileID: 11400000, guid: 0a9d2f0b68749c5488c799b51e069264, type: 2}
   Nohara: {fileID: 0}
@@ -6286,8 +6317,19 @@ MonoBehaviour:
   Rock4: {fileID: 11400000, guid: 71294cdaa3e5dc74daf2525a035f31f6, type: 2}
   Rock5: {fileID: 11400000, guid: d82eb810e9a185549ad3917c1867305c, type: 2}
   Rock6: {fileID: 11400000, guid: 5e484e6ef4ae24541a07ee303bb9e550, type: 2}
+  House: {fileID: 11400000, guid: 895a86720c8b8a646862e17414685a0a, type: 2}
+  House2: {fileID: 11400000, guid: 442fbaae0ce8e044a8c23cafc42566ec, type: 2}
+  House3: {fileID: 11400000, guid: ee8ffbe5b6e8ffb4f86db39cc72cd418, type: 2}
+  House4: {fileID: 11400000, guid: bf870c1ccd8d21a46978f2be3f4bcbb9, type: 2}
+  House5: {fileID: 11400000, guid: 6e3edc54d76b099429bbd3f5fe510c94, type: 2}
   Tenkuu: {fileID: 185866685}
+  Background: {fileID: 0}
+  Building: {fileID: 0}
+  MenuText: {fileID: 0}
+  MapMenu: {fileID: 0}
   MessageText: {fileID: 0}
+  Yes: {fileID: 0}
+  No: {fileID: 0}
   Frame: {fileID: 1238697981}
   Frame2: {fileID: 1128373754}
   Close: {fileID: 1449302300}
