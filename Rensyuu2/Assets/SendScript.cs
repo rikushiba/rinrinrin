@@ -38,6 +38,12 @@ public class SendScript : MonoBehaviour
     public TileBase Rock5;
     public TileBase Rock6;
 
+    public TileBase House;
+    public TileBase House2;
+    public TileBase House3;
+    public TileBase House4;
+    public TileBase House5;
+
     public GameObject Tenkuu;
     public GameObject Background;
     public GameObject Building;
