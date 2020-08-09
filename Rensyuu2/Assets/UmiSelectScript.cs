@@ -69,8 +69,17 @@ public class UmiSelectScript : MonoBehaviour
         }
         else if (ss.Key == 1)
         {
-            if(YText.color == ss.SelectedTextColor) {}
-            else if(NText.color == ss.SelectedTextColor) { }
+            if(YText.color == ss.SelectedTextColor)
+            {
+
+            }
+            else if(NText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+                MText.text = "";
+            }
         }
         else if (ss.Key == 2)
         {

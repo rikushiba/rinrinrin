@@ -39,6 +39,10 @@ public class SendScript : MonoBehaviour
     public TileBase Rock6;
 
     public GameObject Tenkuu;
+    public GameObject Background;
+    public GameObject Building;
+
+
     public GameObject MenuText;
     public GameObject MapMenu;
     public GameObject MessageText;
