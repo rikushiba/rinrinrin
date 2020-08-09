@@ -71,7 +71,11 @@ public class UmiSelectScript : MonoBehaviour
         {
             if(YText.color == ss.SelectedTextColor)
             {
-
+                UB.SetTile(ss.FposInt, null);
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+                MText.text = "";
             }
             else if(NText.color == ss.SelectedTextColor)
             {
@@ -79,12 +83,8 @@ public class UmiSelectScript : MonoBehaviour
                 ss.Yes.SetActive(false);
                 ss.Key = 0;
                 MText.text = "";
+                ss.YesOrNo();
             }
-        }
-        else if (ss.Key == 2)
-        {
-            if (YText.color == ss.SelectedTextColor) { }
-            else if (NText.color == ss.SelectedTextColor) { }
         }
         else
         {
@@ -96,9 +96,9 @@ public class UmiSelectScript : MonoBehaviour
                 ss.No.SetActive(true);
                 ss.Close.SetActive(true);
             }
-            else if( t == ss.Tree || ss.Tree2 || ss.Tree3 || ss.Tree4 || ss.Tree5 || ss.Tree6 || ss.Tree7 || ss.Tree8)
+            else if( t == ss.Tree || t == ss.Tree2 || t == ss.Tree3 || t == ss.Tree4 || t == ss.Tree5 || t == ss.Tree6 || t == ss.Tree7 || t == ss.Tree8)
             {
-                ss.Key = 2;/*if分岐に使う*/
+                ss.Key = 1;/*if分岐に使う*/
                 MText.text = ss.RemoveTreeCost.ToString("d") + "円で木を除去しますか？";
                 ss.Yes.SetActive(true);
                 ss.No.SetActive(true);
