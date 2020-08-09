@@ -28,13 +28,16 @@ public class UmiCloseScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf || ss.Yes.activeSelf || ss.No.activeSelf)
+        if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf || ss.Yes.activeSelf || ss.No.activeSelf || (ss.Tenkuu && ss.Close && ss.Frame2))
         {
             ss.MapMenu.SetActive(false);
             ss.MenuText.SetActive(false);
             ss.Close.SetActive(false);
             ss.No.SetActive(false);
             ss.Yes.SetActive(false);
+            ss.Tenkuu.SetActive(false);
+            ss.Close.SetActive(false);
+            ss.Frame2.SetActive(false);
             ss.Key = 0;
             MText.text = "";
         }
