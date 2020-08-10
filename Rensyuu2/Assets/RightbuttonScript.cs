@@ -27,11 +27,11 @@ public class RightbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (frame2.activeSelf)
+        if (ss.Frame2.activeSelf)
         {
-            if (frame2.transform.position.x < 9)
+            if (ss.Frame2.transform.position.x < 9)
             {
-                frame2.transform.Translate(2, 0, 0);
+                ss.Frame2.transform.Translate(2, 0, 0);
             }
 
         }

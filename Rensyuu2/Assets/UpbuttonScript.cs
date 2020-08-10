@@ -31,11 +31,11 @@ public class UpbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (frame2.activeSelf)
+        if (ss.Frame2.activeSelf)
         {
-            if (frame2.transform.position.y < -7)
+            if (ss.Frame2.transform.position.y < -7)
             {
-                frame2.transform.Translate(0, 2, 0);
+                ss.Frame2.transform.Translate(0, 2, 0);
             }
         }
         else if (ss.MenuText.activeSelf)
@@ -48,9 +48,9 @@ public class UpbuttonScript : MonoBehaviour
         }
         else
         {
-            if (frame.transform.position.y < 9)
+            if (ss.Frame.transform.position.y < 9)
             {
-                frame.transform.Translate(0, 1, 0);
+                ss.Frame.transform.Translate(0, 1, 0);
             }
         
         }

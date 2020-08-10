@@ -36,11 +36,11 @@ public class DownbuttonScript : MonoBehaviour
  }
     public void onClickAct()
     {
-        if (frame2.activeSelf)
+        if (ss.Frame2.activeSelf)
         {
-            if (frame2.transform.position.y >-9)
+            if (ss.Frame2.transform.position.y >-9)
             {
-                frame2.transform.Translate(0, -2, 0);
+                ss.Frame2.transform.Translate(0, -2, 0);
             }
 
         }
