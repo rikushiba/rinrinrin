@@ -8,50 +8,26 @@ using UnityEngine.SceneManagement;
 
 public class YamaSelectButtonScript : MonoBehaviour
 {
-    public Tilemap KBamap;
+    public Tilemap YBamap;
     public Tilemap YBumap;
-    public Tilemap KTmap;
+    public Tilemap YTmap;
     public GameObject Map;
     public GameObject Kyoten;
     public GameObject Umi;
 
     GameObject send;
     SendScript ss;
-    GameObject Close;
-    GameObject Frame;
-    GameObject Frame2;
-    GameObject KT;
 
     Vector3 Fpos;
     Vector3 F2pos;
     Vector3 F2pos2;
-    Vector3Int KBpos;
-    Vector3Int KTpos;
+    Vector3Int YBpos;
+    Vector3Int YTpos;
 
     TileBase t;
     TileBase t2;
     TileBase pret1;
     TileBase pret2;
-    TileBase Tree;
-    TileBase Tree2;
-    TileBase Tree3;
-    TileBase Tree4;
-    TileBase Tree5;
-    TileBase Tree6;
-    TileBase Tree7;
-    TileBase Tree8;
-    TileBase Rock;
-    TileBase Rock2;
-    TileBase Rock3;
-    TileBase Rock4;
-    TileBase Rock5;
-    TileBase Rock6;
-    TileBase UmiTile;
-    TileBase UmiTile2;
-    TileBase DN;
-    TileBase DN2;
-    TileBase Beach;
-    TileBase Beach2;
 
     Text MapText;
     Text KyotenText;
@@ -81,12 +57,54 @@ public class YamaSelectButtonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        F2pos = ss.Frame2.transform.position;
+        F2pos2 = F2pos * 0.5f;
+        //F2posの座標を半分にする
+
+        YTpos = new Vector3Int();
+        YTpos.x = Mathf.FloorToInt(F2pos2.x);
+        YTpos.y = Mathf.FloorToInt(F2pos2.y);
+        YTpos.z = (int)F2pos2.z;
+        //F2pos2の座標を切り捨て
+
+        Fpos = ss.Frame.transform.position;
+        YBpos = new Vector3Int();
+        YBpos.x = Mathf.FloorToInt(Fpos.x);
+        YBpos.y = Mathf.FloorToInt(Fpos.y);
+        YBpos.z = (int)Fpos.z;
+
         t = YBumap.GetTile(ss.FposInt);
+        t2 = YTmap.GetTile(YTpos);
+        pret1 = YBumap.GetTile(YBpos);
+        pret2 = YBamap.GetTile(YBpos);       
     }
 
     public void onClickAct()
     {
-        if (ss.MenuText.activeSelf)
+        if (ss.Tenkuu.activeSelf && ss.Close.activeSelf && ss.Frame2.activeSelf)
+        {
+            // if (pret1 == Tree || pret1 == Tree2 || 
+            //pret1 == Tree3 || pret1 == Tree4 || pret1 == Tree5 || 
+            //pret1 == Tree6 || pret1 == Tree7 || pret1 == Tree8 ||
+            //pret1 == Rock || pret1 == Rock2 || pret1 == Rock3 ||
+            //pret1 == Rock4 || pret1 == Rock5 || pret1 == Rock6)
+            //一応タイルごとに書いたけど使わないかも           
+            if (YBumap.HasTile(YBpos))
+            {
+
+            }
+            else if (pret2 == ss.UmiTile || pret2 == ss.UmiTile2 ||
+                pret2 == ss.DarkNohara || pret2 == ss.DarkNohara2 || 
+                pret2 == ss.Beach || pret2 == ss.Beach2)
+            {
+
+            }
+            else
+            {
+                YBumap.SetTile(YBpos, t2);
+            }
+        }
+        else if (ss.MenuText.activeSelf)
         {
             if (MapText.color == ss.SelectedTextColor)
             {
@@ -146,9 +164,9 @@ public class YamaSelectButtonScript : MonoBehaviour
             }
             else
             {
-               /* KT.SetActive(true);
-                Close.SetActive(true);
-                Frame2.SetActive(true);*/
+                ss.Tenkuu.SetActive(true);
+                ss.Close.SetActive(true);
+                ss.Frame2.SetActive(true);
             }
         }
     }

@@ -5,11 +5,9 @@ using UnityEngine.UI;
 
 public class CloseScript : MonoBehaviour
 {
-    public GameObject Grid;
     GameObject send;
     SendScript ss;
-    GameObject Close;
-    GameObject Frame2;
+    
     Text MText;
 
     private void Awake()
@@ -20,8 +18,7 @@ public class CloseScript : MonoBehaviour
     void Start()
     {
         ss = send.GetComponent<SendScript>();
-        Close = ss.Close;
-        Frame2 = ss.Frame2;
+        
         MText = ss.MessageText.GetComponent<Text>();
     }
 
@@ -32,9 +29,9 @@ public class CloseScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        Grid.SetActive(false);
-        Close.SetActive(false);
-        Frame2.SetActive(false);
+        ss.Tenkuu.SetActive(false);
+        ss.Close.SetActive(false);
+        ss.Frame2.SetActive(false);
         ss.MenuText.SetActive(false);
         ss.MapMenu.SetActive(false);
         ss.MenuText.SetActive(false);

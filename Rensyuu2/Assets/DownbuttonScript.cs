@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class DownbuttonScript : MonoBehaviour
 {
-    public GameObject frame;
-   public GameObject frame2;
-
     GameObject send;
     SendScript ss;
 
@@ -22,8 +19,6 @@ public class DownbuttonScript : MonoBehaviour
     void Start()
     {
         ss = send.GetComponent<SendScript>();
-
-        frame = GameObject.Find("frame");
 
         Menu = ss.GetList(ss.MenuText);
         Map = ss.GetList(ss.MapMenu);
@@ -54,9 +49,9 @@ public class DownbuttonScript : MonoBehaviour
         }
         else
         {
-            if (frame.transform.position.y > -9)
+            if (ss.Frame.transform.position.y > -9)
             {
-                frame.transform.Translate(0, -1, 0);
+                ss.Frame.transform.Translate(0, -1, 0);
             }
         }
     }

@@ -27,7 +27,7 @@ public class YamaFrameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf || ss.Yes.activeSelf || ss.No.activeSelf)
+        if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf || ss.Yes.activeSelf || ss.No.activeSelf || (ss.Tenkuu.activeSelf && ss.Close.activeSelf && ss.Frame2.activeSelf) )
         {
         }
         else
