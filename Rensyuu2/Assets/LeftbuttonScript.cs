@@ -30,7 +30,7 @@ public class LeftbuttonScript : MonoBehaviour
         {
             if (ss.Frame2.transform.position.x > -3)
             {
-                ss.Frame2.transform.Translate(-2, 0, 0);
+                ss.Frame2.transform.Translate(-4, 0, 0);
             }
 
         }

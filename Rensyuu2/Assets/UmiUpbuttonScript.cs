@@ -37,7 +37,14 @@ public class UmiUpbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (MenuText.activeSelf)
+        if (ss.Frame2.activeSelf)
+        {
+            if (ss.Frame2.transform.position.y < -6)
+            {
+                ss.Frame2.transform.Translate(0, 2, 0);
+            }
+        }
+        else if (MenuText.activeSelf)
         {
             ss.UpList(Menu, MenuText);
         }

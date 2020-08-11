@@ -25,7 +25,15 @@ public class UmiLeftbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf)
+        if (ss.Frame2.activeSelf)
+        {
+            if (ss.Frame2.transform.position.x > -9)
+            {
+                ss.Frame2.transform.Translate(-4, 0, 0);
+            }
+
+        }
+        else if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf)
         {
 
         }

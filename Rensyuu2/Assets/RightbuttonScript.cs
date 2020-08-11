@@ -29,9 +29,9 @@ public class RightbuttonScript : MonoBehaviour
     {
         if (ss.Frame2.activeSelf)
         {
-            if (ss.Frame2.transform.position.x < 9)
+            if (ss.Frame2.transform.position.x < 7)
             {
-                ss.Frame2.transform.Translate(2, 0, 0);
+                ss.Frame2.transform.Translate(4, 0, 0);
             }
 
         }

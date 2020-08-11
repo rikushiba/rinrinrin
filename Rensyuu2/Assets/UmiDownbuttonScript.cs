@@ -36,7 +36,14 @@ public class UmiDownbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (MenuText.active)
+        if (ss.Frame2.activeSelf)
+        {
+            if (ss.Frame2.transform.position.y > -8)
+            {
+                ss.Frame2.transform.Translate(0, -2, 0);
+            }
+        }
+        else if (MenuText.activeSelf)
         {
             ss.DownList(Menu, MenuText);
         }
