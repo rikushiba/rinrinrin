@@ -32,6 +32,7 @@ public class CloseScript : MonoBehaviour
         ss.Tenkuu.SetActive(false);
         ss.Close.SetActive(false);
         ss.Frame2.SetActive(false);
+        ss.Back.SetActive(false);
         ss.MenuText.SetActive(false);
         ss.MapMenu.SetActive(false);
         ss.MenuText.SetActive(false);

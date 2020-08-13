@@ -62,6 +62,7 @@ public class SendScript : MonoBehaviour
     public GameObject Frame2;
     public GameObject Close;
     public GameObject Select;
+    public GameObject Back;
     public GameObject Menu;
     public Color SelectedTextColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
     public Color UnselectedTextColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);

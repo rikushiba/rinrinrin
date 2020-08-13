@@ -31,6 +31,10 @@ public class KyotenMenuButtonScript : MonoBehaviour
             ss.MenuText.SetActive(false);
             ss.Close.SetActive(false);
         }
+        else if (ss.Tenkuu.activeSelf && ss.Frame2.activeSelf)
+        {
+
+        }
         else
         {
             ss.MenuText.SetActive(true);
