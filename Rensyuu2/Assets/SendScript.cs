@@ -48,7 +48,7 @@ public class SendScript : MonoBehaviour
     public GameObject Background;
     public GameObject Building;
 
-
+    public GameObject BouekiMenu;
     public GameObject MenuText;
     public GameObject MapMenu;
     public GameObject MessageText;
