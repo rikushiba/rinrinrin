@@ -10,10 +10,7 @@ public class KyotenFrameScript : MonoBehaviour
 
     GameObject send;
     SendScript ss;
-    GameObject Close;
-    GameObject Frame;
-    GameObject Frame2;
-    GameObject KT;
+    
     Transform ObTransform;
 
     private void Awake()
@@ -24,10 +21,6 @@ public class KyotenFrameScript : MonoBehaviour
     void Start()
     {
         ss = send.GetComponent<SendScript>();
-        Close = ss.Close;
-        Frame = ss.Frame;
-        Frame2 = ss.Frame2;
-        KT = ss.Tenkuu;
 
         ObTransform = this.transform;
         Obp = ObTransform.position;
@@ -36,7 +29,7 @@ public class KyotenFrameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Close.activeSelf)
+        if (ss.Tenkuu.activeSelf && ss.Frame2.activeSelf)
         {
 
         }

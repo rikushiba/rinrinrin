@@ -11,6 +11,7 @@ public class OpenScript : MonoBehaviour
     public Tilemap KBamap;
     public Tilemap KBumap;
     public Tilemap KTmap;
+    public GameObject Shop;
     public GameObject Map;
     public GameObject Yama;
     public GameObject Umi;
@@ -29,6 +30,7 @@ public class OpenScript : MonoBehaviour
     TileBase pret1;
     TileBase pret2;
 
+    Text ShopText;
     Text MapText;
     Text YamaText;
     Text UmiText;
@@ -46,7 +48,8 @@ public class OpenScript : MonoBehaviour
     void Start()
     {
         ss = send.GetComponent<SendScript>();
-       
+
+        ShopText = Shop.GetComponent<Text>();
         MapText = Map.GetComponent<Text>();
         YamaText = Yama.GetComponent<Text>();
         UmiText = Umi.GetComponent<Text>();
@@ -74,17 +77,17 @@ public class OpenScript : MonoBehaviour
         KBpos.y = Mathf.FloorToInt(Fpos.y);
         KBpos.z = (int)Fpos.z;
 
-        t2 = KTmap.GetTile(KTpos);
-        pret1 = KBumap.GetTile(KBpos);
-        pret2 = KBamap.GetTile(KBpos);
-
         t = KBumap.GetTile(ss.FposInt);
+        t2 = KTmap.GetTile(KTpos);
+
+        pret1 = KBumap.GetTile(KBpos);
+        pret2 = KBamap.GetTile(KBpos);   
     }
     public void onClickAct()
     {
-        if (ss.Tenkuu.activeSelf && ss.Close.activeSelf && ss.Frame2.activeSelf)
+        if (ss.Tenkuu.activeSelf && ss.Close.activeSelf && ss.Frame2.activeSelf && !(ss.Back.activeSelf) )
         {
-           // if (pret1 == Tree || pret1 == Tree2 || 
+           //if (pret1 == Tree || pret1 == Tree2 || 
             //pret1 == Tree3 || pret1 == Tree4 || pret1 == Tree5 || 
             //pret1 == Tree6 || pret1 == Tree7 || pret1 == Tree8 ||
             //pret1 == Rock || pret1 == Rock2 || pret1 == Rock3 ||
@@ -105,12 +108,30 @@ public class OpenScript : MonoBehaviour
                 KBumap.SetTile(KBpos, t2);
             }
         }
+        else if (ss.Tenkuu.activeSelf  && ss.Frame2.activeSelf && ss.Back.activeSelf && ss.Close.activeSelf )
+        {
+            ss.Tenkuu.SetActive(false);
+            ss.Frame2.SetActive(false);
+            ss.Close.SetActive(false);
+        }
+        else if (ss.Back.activeSelf && !(ss.Frame2.activeSelf) && !(ss.MapMenu.activeSelf) )
+        {
+            KBumap.SetTile(KBpos, t2);
+        }
         else if (ss.MenuText.activeSelf)
         {
-            if (MapText.color == ss.SelectedTextColor)
+            if (ShopText.color == ss.SelectedTextColor)
+            {
+                ss.Tenkuu.SetActive(true);
+                ss.Frame2.SetActive(true);
+                ss.MenuText.SetActive(false);
+                ss.Back.SetActive(true);
+            }
+            else if (MapText.color == ss.SelectedTextColor)
             {
                 ss.MenuText.SetActive(false);
                 ss.MapMenu.SetActive(true);
+                ss.Back.SetActive(true);
             }
         }
         else if (ss.MapMenu.activeSelf)
