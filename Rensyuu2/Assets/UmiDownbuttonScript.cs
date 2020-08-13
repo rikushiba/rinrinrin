@@ -12,6 +12,7 @@ public class UmiDownbuttonScript : MonoBehaviour
 
     public GameObject MenuText;
     public GameObject MapMenu;
+    Text[] Boueki = new Text[10];
     Text[] Menu = new Text[10];
     Text[] Map = new Text[10];
     private void Awake()
@@ -27,6 +28,7 @@ public class UmiDownbuttonScript : MonoBehaviour
 
         Menu = ss.GetList(MenuText);
         Map = ss.GetList(MapMenu);
+        Boueki = ss.GetList(ss.BouekiMenu);
     }
 
     // Update is called once per frame
@@ -50,6 +52,10 @@ public class UmiDownbuttonScript : MonoBehaviour
         else if (MapMenu.activeSelf)
         {
             ss.DownList(Map, MapMenu);
+        }
+        else if (ss.BouekiMenu.activeSelf)
+        {
+            ss.DownList(Boueki, ss.BouekiMenu);
         }
         else
         {

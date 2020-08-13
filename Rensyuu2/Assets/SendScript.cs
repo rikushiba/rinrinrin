@@ -48,6 +48,8 @@ public class SendScript : MonoBehaviour
     public GameObject Background;
     public GameObject Building;
 
+    public GameObject YunyuMenu;
+    public GameObject YusyutsuMenu;
     public GameObject BouekiMenu;
     public GameObject MenuText;
     public GameObject MapMenu;

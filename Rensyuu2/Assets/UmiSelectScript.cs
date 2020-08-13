@@ -14,6 +14,15 @@ public class UmiSelectScript : MonoBehaviour
     public GameObject Yama;
     public GameObject Kyoten;
     public GameObject Boueki;
+    public GameObject Save;
+    public GameObject Yunyu;
+    public GameObject Yusyutsu;
+    public GameObject Yunyu1;
+    public GameObject Yunyu2;
+    public GameObject Yunyu3;
+    public GameObject Yusyutsu1;
+    public GameObject Yusyutsu2;
+    public GameObject Yusyutsu3;
     public Tilemap UBamap;
     public Tilemap UBumap;
     public Tilemap UTmap;
@@ -22,6 +31,14 @@ public class UmiSelectScript : MonoBehaviour
     Text YamaText;
     Text KyotenText;
     Text BouekiText;
+    Text YunyuText;
+    Text YusyutsuText;
+    Text Yunyu1Text;
+    Text Yunyu2Text;
+    Text Yunyu3Text;
+    Text Yusyutsu1Text;
+    Text Yusyutsu2Text;
+    Text Yusyutsu3Text;
     Text MText;
     Text YText;
     Text NText;
@@ -51,6 +68,11 @@ public class UmiSelectScript : MonoBehaviour
         YamaText = Yama.GetComponent<Text>();
         KyotenText = Kyoten.GetComponent<Text>();
         BouekiText = Boueki.GetComponent<Text>();
+        YusyutsuText= Yusyutsu.GetComponent<Text>();
+        Yusyutsu1Text= Yusyutsu1.GetComponent<Text>();
+        Yusyutsu2Text= Yusyutsu2.GetComponent<Text>();
+        Yusyutsu3Text= Yusyutsu3.GetComponent<Text>();
+        /*ここが途中*/
         MText = ss.MessageText.GetComponent<Text>();
         YText = ss.Yes.GetComponent<Text>();
         NText = ss.No.GetComponent<Text>();
@@ -94,6 +116,7 @@ public class UmiSelectScript : MonoBehaviour
             else if (BouekiText.color == ss.SelectedTextColor)
             {
                 ss.MenuText.SetActive(false);
+                ss.BouekiMenu.SetActive(true);
             }
         }
         else if (MapMenu.activeSelf)
@@ -106,6 +129,10 @@ public class UmiSelectScript : MonoBehaviour
             {
                 SceneManager.LoadSceneAsync("KyotenScene");
             }
+        }
+        else if (ss.BouekiMenu.activeSelf)
+        {
+
         }
         else if (ss.Tenkuu.activeSelf && ss.Frame2.activeSelf && ss.Close.activeSelf)
         {

@@ -33,7 +33,7 @@ public class UmiRightbuttonScript : MonoBehaviour
             }
 
         }
-        else if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf)
+        else if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf || ss.BouekiMenu.activeSelf)
         {
         
         }
