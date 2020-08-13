@@ -13,6 +13,7 @@ public class UmiSelectScript : MonoBehaviour
     public GameObject Map;
     public GameObject Yama;
     public GameObject Kyoten;
+    public GameObject Boueki;
     public Tilemap UBamap;
     public Tilemap UBumap;
     public Tilemap UTmap;
@@ -20,6 +21,7 @@ public class UmiSelectScript : MonoBehaviour
     Text MapText;
     Text YamaText;
     Text KyotenText;
+    Text BouekiText;
     Text MText;
     Text YText;
     Text NText;
@@ -48,6 +50,7 @@ public class UmiSelectScript : MonoBehaviour
         MapText = Map.GetComponent<Text>();
         YamaText = Yama.GetComponent<Text>();
         KyotenText = Kyoten.GetComponent<Text>();
+        BouekiText = Boueki.GetComponent<Text>();
         MText = ss.MessageText.GetComponent<Text>();
         YText = ss.Yes.GetComponent<Text>();
         NText = ss.No.GetComponent<Text>();
@@ -85,8 +88,12 @@ public class UmiSelectScript : MonoBehaviour
         {
             if (MapText.color == ss.SelectedTextColor)
             {
-                MenuText.SetActive(false);
-                MapMenu.SetActive(true);
+                ss.MenuText.SetActive(false);
+                ss.MapMenu.SetActive(true);
+            }
+            else if (BouekiText.color == ss.SelectedTextColor)
+            {
+                ss.MenuText.SetActive(false);
             }
         }
         else if (MapMenu.activeSelf)
