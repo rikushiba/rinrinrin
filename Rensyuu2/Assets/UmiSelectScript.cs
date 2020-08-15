@@ -72,7 +72,10 @@ public class UmiSelectScript : MonoBehaviour
         Yusyutsu1Text= Yusyutsu1.GetComponent<Text>();
         Yusyutsu2Text= Yusyutsu2.GetComponent<Text>();
         Yusyutsu3Text= Yusyutsu3.GetComponent<Text>();
-        /*ここが途中*/
+        YunyuText= Yunyu.GetComponent<Text>();
+        Yunyu1Text = Yunyu1.GetComponent<Text>();
+        Yunyu2Text = Yunyu2.GetComponent<Text>();
+        Yunyu3Text = Yunyu3.GetComponent<Text>();
         MText = ss.MessageText.GetComponent<Text>();
         YText = ss.Yes.GetComponent<Text>();
         NText = ss.No.GetComponent<Text>();
@@ -132,7 +135,16 @@ public class UmiSelectScript : MonoBehaviour
         }
         else if (ss.BouekiMenu.activeSelf)
         {
-
+            if (YunyuText.color == ss.SelectedTextColor)
+            {
+                ss.BouekiMenu.SetActive(false);
+                ss.YunyuMenu.SetActive(true);
+            }
+            else if (YusyutsuText.color == ss.SelectedTextColor)
+            {
+                ss.BouekiMenu.SetActive(false);
+                ss.YusyutsuMenu.SetActive(true);
+            }
         }
         else if (ss.Tenkuu.activeSelf && ss.Frame2.activeSelf && ss.Close.activeSelf)
         {
