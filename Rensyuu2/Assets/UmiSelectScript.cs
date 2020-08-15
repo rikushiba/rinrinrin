@@ -106,7 +106,7 @@ public class UmiSelectScript : MonoBehaviour
         pret1 = UBumap.GetTile(ss.FposInt);
         pret2 = UBamap.GetTile(ss.FposInt);
 
-        if (ss.YunyuMenu.activeSelf)
+        if (ss.YunyuMenu.activeSelf && !(ss.Yes.activeSelf))
         {
             if (Yunyu1Text.color == ss.SelectedTextColor)
             {
@@ -114,14 +114,14 @@ public class UmiSelectScript : MonoBehaviour
             }
             else if (Yunyu2Text.color == ss.SelectedTextColor)
             {
-
+                MText.text = "費用：" + ss.Yunyu2Cost.ToString("d") + "\n" + "輸入品：" + ss.Yunyu2goods;
             }
             else if (Yunyu3Text.color == ss.SelectedTextColor)
             {
-
+                MText.text = "費用：" + ss.Yunyu3Cost.ToString("d") + "\n" + "輸入品：" + ss.Yunyu3goods;
             }
         }
-        else if (ss.YusyutsuMenu.activeSelf)
+        else if (ss.YusyutsuMenu.activeSelf && !(ss.Yes.activeSelf))
         {
 
             if (Yusyutsu1Text.color == ss.SelectedTextColor)
@@ -213,6 +213,36 @@ public class UmiSelectScript : MonoBehaviour
                 MText.text = "";
                 ss.YesOrNo();
             }
+        }
+        else if (ss.YunyuMenu.activeSelf)
+        {
+            ss.Yes.SetActive(true);
+            ss.No.SetActive(true);
+            MText.text = "この商品を輸入しますか?";
+            if (Yunyu1Text.color == ss.SelectedTextColor)
+            {
+                ss.Key = 21;
+            }
+            else if (Yunyu2Text.color == ss.SelectedTextColor)
+            {
+                ss.Key = 22;
+            }
+            else if (Yunyu3Text.color == ss.SelectedTextColor)
+            {
+                ss.Key = 23;
+            }
+        }
+        else if(ss.Key == 21)
+        {
+
+        }
+        else if (ss.Key == 22)
+        {
+
+        }
+        else if (ss.Key == 23)
+        {
+
         }
         else
         {

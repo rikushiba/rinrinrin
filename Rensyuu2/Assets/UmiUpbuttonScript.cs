@@ -43,7 +43,11 @@ public class UmiUpbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (ss.Frame2.activeSelf)
+        if (ss.Yes.activeSelf)
+        {
+
+        }
+        else if (ss.Frame2.activeSelf)
         {
             if (ss.Frame2.transform.position.y < -6)
             {

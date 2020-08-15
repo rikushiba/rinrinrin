@@ -25,7 +25,11 @@ public class UmiLeftbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (ss.Frame2.activeSelf)
+        if (ss.Yes.activeSelf)
+        {
+            ss.YesOrNo();
+        }
+        else if (ss.Frame2.activeSelf)
         {
             if (ss.Frame2.transform.position.x > -9)
             {
@@ -37,10 +41,6 @@ public class UmiLeftbuttonScript : MonoBehaviour
             || ss.YunyuMenu.activeSelf)
         {
 
-        }
-        else if (ss.Yes.activeSelf)
-        {
-            ss.YesOrNo();
         }
         else
         {

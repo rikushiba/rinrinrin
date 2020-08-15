@@ -42,7 +42,11 @@ public class UmiDownbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (ss.Frame2.activeSelf)
+        if (ss.Yes.activeSelf)
+        {
+
+        }
+        else if(ss.Frame2.activeSelf)
         {
             if (ss.Frame2.transform.position.y > -8)
             {
@@ -68,10 +72,6 @@ public class UmiDownbuttonScript : MonoBehaviour
         else if (ss.YusyutsuMenu.activeSelf)
         {
             ss.DownList(Yusyutsu, ss.YusyutsuMenu);
-        }
-        else if (ss.Yes.activeSelf)
-        {
-
         }
         else
         {
