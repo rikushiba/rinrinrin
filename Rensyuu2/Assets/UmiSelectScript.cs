@@ -105,6 +105,38 @@ public class UmiSelectScript : MonoBehaviour
         t2 = UTmap.GetTile(UTpos);
         pret1 = UBumap.GetTile(ss.FposInt);
         pret2 = UBamap.GetTile(ss.FposInt);
+
+        if (ss.YunyuMenu.activeSelf)
+        {
+            if (Yunyu1Text.color == ss.SelectedTextColor)
+            {
+                MText.text = "費用："+ ss.Yunyu1Cost.ToString("d") + "\n" + "輸入品：" + ss.Yunyu1goods;
+            }
+            else if (Yunyu2Text.color == ss.SelectedTextColor)
+            {
+
+            }
+            else if (Yunyu3Text.color == ss.SelectedTextColor)
+            {
+
+            }
+        }
+        else if (ss.YusyutsuMenu.activeSelf)
+        {
+
+            if (Yusyutsu1Text.color == ss.SelectedTextColor)
+            {
+
+            }
+            else if (Yusyutsu2Text.color == ss.SelectedTextColor)
+            {
+
+            }
+            else if (Yusyutsu3Text.color == ss.SelectedTextColor)
+            {
+
+            }
+        }
     }
 
     public void onClickAct()

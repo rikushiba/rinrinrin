@@ -75,6 +75,19 @@ public class SendScript : MonoBehaviour
     public int RemoveTreeCost = 100;
     public int RemoveRockCost = 100;
 
+    /*輸出*/
+
+
+    /*輸入*/
+    /*輸入費用*/
+    public int Yunyu1Cost = 100;
+    public int Yunyu2Cost = 100;
+    public int Yunyu3Cost = 100;
+    /*輸入品*/
+    public string Yunyu1goods = "米";
+    public string Yunyu2goods = "肉";
+    public string Yunyu3goods = "魚";
+
     public Text[] GetList(GameObject ParentList)
     {
         int i=0;

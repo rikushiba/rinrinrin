@@ -41,6 +41,7 @@ public class MenuButtonScript : MonoBehaviour
             ss.YunyuMenu.SetActive(false);
             ss.Close.SetActive(false);
             ss.Key = 0;
+            MText.text = "";
         }
         else
         {
