@@ -10,6 +10,7 @@ public class UmiSelectScript : MonoBehaviour
 {
     public GameObject MenuText;
     public GameObject MapMenu;
+    public GameObject Shop;
     public GameObject Map;
     public GameObject Yama;
     public GameObject Kyoten;
@@ -27,6 +28,7 @@ public class UmiSelectScript : MonoBehaviour
     public Tilemap UBumap;
     public Tilemap UTmap;
 
+    Text ShopText;
     Text MapText;
     Text YamaText;
     Text KyotenText;
@@ -64,6 +66,8 @@ public class UmiSelectScript : MonoBehaviour
     void Start()
     {
         ss = send.GetComponent<SendScript>();
+
+        ShopText = Shop.GetComponent<Text>();
         MapText = Map.GetComponent<Text>();
         YamaText = Yama.GetComponent<Text>();
         KyotenText = Kyoten.GetComponent<Text>();
@@ -141,17 +145,26 @@ public class UmiSelectScript : MonoBehaviour
 
     public void onClickAct()
     {
-        if (MenuText.activeSelf)
+        if (ss.MenuText.activeSelf)
         {
-            if (MapText.color == ss.SelectedTextColor)
+            if (ShopText.color == ss.SelectedTextColor)
+            {
+                ss.Tenkuu.SetActive(true);
+                ss.Frame2.SetActive(true);
+                ss.MenuText.SetActive(false);
+                ss.Back.SetActive(true);
+            }
+            else if (MapText.color == ss.SelectedTextColor)
             {
                 ss.MenuText.SetActive(false);
                 ss.MapMenu.SetActive(true);
+                ss.Back.SetActive(true);
             }
             else if (BouekiText.color == ss.SelectedTextColor)
             {
                 ss.MenuText.SetActive(false);
                 ss.BouekiMenu.SetActive(true);
+                ss.Back.SetActive(true);
             }
         }
         else if (MapMenu.activeSelf)
@@ -178,19 +191,23 @@ public class UmiSelectScript : MonoBehaviour
                 ss.YusyutsuMenu.SetActive(true);
             }
         }
-        else if (ss.Tenkuu.activeSelf && ss.Frame2.activeSelf && ss.Close.activeSelf)
+        else if (ss.Back.activeSelf && !(ss.Frame2.activeSelf) && !(ss.MapMenu.activeSelf))
         {
             if (UBumap.HasTile(ss.FposInt))
             {
 
             }
-            else if (pret2 == ss.UmiTile || pret2 == ss.UmiTile2 || pret2 == ss.Beach || pret2 == ss.Beach2)
+            else if (pret2 == ss.UmiTile || pret2 == ss.UmiTile2 ||
+                pret2 == ss.DarkNohara || pret2 == ss.DarkNohara2 ||
+                pret2 == ss.Beach || pret2 == ss.Beach2)
             {
 
             }
             else
             {
-                UBumap.SetTile(ss.FposInt,t2);
+
+                UBumap.SetTile(ss.FposInt, t2);
+
             }
         }
         else if (ss.Key == 1)
@@ -363,12 +380,6 @@ public class UmiSelectScript : MonoBehaviour
                 ss.Yes.SetActive(true);
                 ss.No.SetActive(true);
                 ss.Close.SetActive(true);
-            }
-            else
-            {
-                ss.Tenkuu.SetActive(true);
-                ss.Close.SetActive(true);
-                ss.Frame2.SetActive(true);
             }
         }
     }

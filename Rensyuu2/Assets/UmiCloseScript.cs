@@ -40,6 +40,7 @@ public class UmiCloseScript : MonoBehaviour
             ss.Tenkuu.SetActive(false);
             ss.Close.SetActive(false);
             ss.Frame2.SetActive(false);
+            ss.Back.SetActive(false);
             ss.BouekiMenu.SetActive(false);
             ss.YunyuMenu.SetActive(false);
             ss.YusyutsuMenu.SetActive(false);
