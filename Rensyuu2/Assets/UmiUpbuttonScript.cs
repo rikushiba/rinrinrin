@@ -12,6 +12,9 @@ public class UmiUpbuttonScript : MonoBehaviour
 
     Text[] Menu = new Text[10];
     Text[] Map = new Text[10];
+    Text[] Boueki = new Text[10];
+    Text[] Yunyu = new Text[10];
+    Text[] Yusyutsu = new Text[10];
     public GameObject MenuText;
     public GameObject MapMenu;
 
@@ -28,6 +31,9 @@ public class UmiUpbuttonScript : MonoBehaviour
 
         Menu = ss.GetList(MenuText);
         Map = ss.GetList(MapMenu);
+        Boueki = ss.GetList(ss.BouekiMenu);
+        Yunyu = ss.GetList(ss.YunyuMenu);
+        Yusyutsu = ss.GetList(ss.YusyutsuMenu);
     }
 
     // Update is called once per frame
@@ -37,7 +43,11 @@ public class UmiUpbuttonScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (ss.Frame2.activeSelf)
+        if (ss.Yes.activeSelf)
+        {
+
+        }
+        else if (ss.Frame2.activeSelf)
         {
             if (ss.Frame2.transform.position.y < -6)
             {
@@ -51,6 +61,22 @@ public class UmiUpbuttonScript : MonoBehaviour
         else if (MapMenu.activeSelf)
         {
             ss.UpList(Map, MapMenu);
+        }
+        else if (ss.BouekiMenu.activeSelf)
+        {
+            ss.UpList(Boueki, ss.BouekiMenu);
+        }
+        else if (ss.YunyuMenu.activeSelf)
+        {
+            ss.UpList(Yunyu, ss.YunyuMenu);
+        }
+        else if (ss.YusyutsuMenu.activeSelf)
+        {
+            ss.UpList(Yusyutsu, ss.YusyutsuMenu);
+        }
+        else if (ss.Yes.activeSelf)
+        {
+
         }
         else
         {

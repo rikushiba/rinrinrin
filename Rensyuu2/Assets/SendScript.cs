@@ -48,6 +48,8 @@ public class SendScript : MonoBehaviour
     public GameObject Background;
     public GameObject Building;
 
+    public GameObject YunyuMenu;
+    public GameObject YusyutsuMenu;
     public GameObject BouekiMenu;
     public GameObject MenuText;
     public GameObject MapMenu;
@@ -72,6 +74,27 @@ public class SendScript : MonoBehaviour
     /*木、岩を除去するために必要な費用*/
     public int RemoveTreeCost = 100;
     public int RemoveRockCost = 100;
+
+    /*輸出*/
+    /*輸出品*/
+    public string Yusyutsu1goods = "米";
+    public string Yusyutsu2goods = "肉";
+    public string Yusyutsu3goods = "魚";
+    /*収益*/
+    public int Yusyutsu1Syuueki = 100;
+    public int Yusyutsu2Syuueki = 100;
+    public int Yusyutsu3Syuueki = 100;
+
+
+    /*輸入*/
+    /*輸入費用*/
+    public int Yunyu1Cost = 100;
+    public int Yunyu2Cost = 100;
+    public int Yunyu3Cost = 100;
+    /*輸入品*/
+    public string Yunyu1goods = "米";
+    public string Yunyu2goods = "肉";
+    public string Yunyu3goods = "魚";
 
     public Text[] GetList(GameObject ParentList)
     {

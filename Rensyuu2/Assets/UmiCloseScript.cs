@@ -28,7 +28,9 @@ public class UmiCloseScript : MonoBehaviour
     }
     public void onClickAct()
     {
-        if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf || ss.Yes.activeSelf || ss.No.activeSelf || (ss.Tenkuu && ss.Close && ss.Frame2))
+        if (ss.MenuText.activeSelf || ss.MapMenu.activeSelf || ss.Yes.activeSelf || ss.No.activeSelf || 
+            (ss.Tenkuu && ss.Close && ss.Frame2) || ss.BouekiMenu.activeSelf || ss.YunyuMenu.activeSelf
+            || ss.YusyutsuMenu.activeSelf)
         {
             ss.MapMenu.SetActive(false);
             ss.MenuText.SetActive(false);
@@ -38,6 +40,9 @@ public class UmiCloseScript : MonoBehaviour
             ss.Tenkuu.SetActive(false);
             ss.Close.SetActive(false);
             ss.Frame2.SetActive(false);
+            ss.BouekiMenu.SetActive(false);
+            ss.YunyuMenu.SetActive(false);
+            ss.YusyutsuMenu.SetActive(false);
             ss.Key = 0;
             MText.text = "";
         }

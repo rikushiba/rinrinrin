@@ -14,6 +14,15 @@ public class UmiSelectScript : MonoBehaviour
     public GameObject Yama;
     public GameObject Kyoten;
     public GameObject Boueki;
+    public GameObject Save;
+    public GameObject Yunyu;
+    public GameObject Yusyutsu;
+    public GameObject Yunyu1;
+    public GameObject Yunyu2;
+    public GameObject Yunyu3;
+    public GameObject Yusyutsu1;
+    public GameObject Yusyutsu2;
+    public GameObject Yusyutsu3;
     public Tilemap UBamap;
     public Tilemap UBumap;
     public Tilemap UTmap;
@@ -22,6 +31,14 @@ public class UmiSelectScript : MonoBehaviour
     Text YamaText;
     Text KyotenText;
     Text BouekiText;
+    Text YunyuText;
+    Text YusyutsuText;
+    Text Yunyu1Text;
+    Text Yunyu2Text;
+    Text Yunyu3Text;
+    Text Yusyutsu1Text;
+    Text Yusyutsu2Text;
+    Text Yusyutsu3Text;
     Text MText;
     Text YText;
     Text NText;
@@ -51,6 +68,14 @@ public class UmiSelectScript : MonoBehaviour
         YamaText = Yama.GetComponent<Text>();
         KyotenText = Kyoten.GetComponent<Text>();
         BouekiText = Boueki.GetComponent<Text>();
+        YusyutsuText= Yusyutsu.GetComponent<Text>();
+        Yusyutsu1Text= Yusyutsu1.GetComponent<Text>();
+        Yusyutsu2Text= Yusyutsu2.GetComponent<Text>();
+        Yusyutsu3Text= Yusyutsu3.GetComponent<Text>();
+        YunyuText= Yunyu.GetComponent<Text>();
+        Yunyu1Text = Yunyu1.GetComponent<Text>();
+        Yunyu2Text = Yunyu2.GetComponent<Text>();
+        Yunyu3Text = Yunyu3.GetComponent<Text>();
         MText = ss.MessageText.GetComponent<Text>();
         YText = ss.Yes.GetComponent<Text>();
         NText = ss.No.GetComponent<Text>();
@@ -80,6 +105,38 @@ public class UmiSelectScript : MonoBehaviour
         t2 = UTmap.GetTile(UTpos);
         pret1 = UBumap.GetTile(ss.FposInt);
         pret2 = UBamap.GetTile(ss.FposInt);
+
+        if (ss.YunyuMenu.activeSelf && !(ss.Yes.activeSelf))
+        {
+            if (Yunyu1Text.color == ss.SelectedTextColor)
+            {
+                MText.text = "費用："+ ss.Yunyu1Cost.ToString("d") + "\n" + "輸入品：" + ss.Yunyu1goods;
+            }
+            else if (Yunyu2Text.color == ss.SelectedTextColor)
+            {
+                MText.text = "費用：" + ss.Yunyu2Cost.ToString("d") + "\n" + "輸入品：" + ss.Yunyu2goods;
+            }
+            else if (Yunyu3Text.color == ss.SelectedTextColor)
+            {
+                MText.text = "費用：" + ss.Yunyu3Cost.ToString("d") + "\n" + "輸入品：" + ss.Yunyu3goods;
+            }
+        }
+        else if (ss.YusyutsuMenu.activeSelf && !(ss.Yes.activeSelf))
+        {
+
+            if (Yusyutsu1Text.color == ss.SelectedTextColor)
+            {
+                MText.text = "輸出品：" + ss.Yusyutsu1goods + "\n" + "収益：" + ss.Yusyutsu1Syuueki.ToString("d");
+            }
+            else if (Yusyutsu2Text.color == ss.SelectedTextColor)
+            {
+                MText.text = "輸出品：" + ss.Yusyutsu2goods + "\n" + "収益：" + ss.Yusyutsu2Syuueki.ToString("d");
+            }
+            else if (Yusyutsu3Text.color == ss.SelectedTextColor)
+            {
+                MText.text = "輸出品：" + ss.Yusyutsu3goods + "\n" + "収益：" + ss.Yusyutsu3Syuueki.ToString("d");
+            }
+        }
     }
 
     public void onClickAct()
@@ -94,6 +151,7 @@ public class UmiSelectScript : MonoBehaviour
             else if (BouekiText.color == ss.SelectedTextColor)
             {
                 ss.MenuText.SetActive(false);
+                ss.BouekiMenu.SetActive(true);
             }
         }
         else if (MapMenu.activeSelf)
@@ -105,6 +163,19 @@ public class UmiSelectScript : MonoBehaviour
             else if (KyotenText.color == ss.SelectedTextColor)
             {
                 SceneManager.LoadSceneAsync("KyotenScene");
+            }
+        }
+        else if (ss.BouekiMenu.activeSelf)
+        {
+            if (YunyuText.color == ss.SelectedTextColor)
+            {
+                ss.BouekiMenu.SetActive(false);
+                ss.YunyuMenu.SetActive(true);
+            }
+            else if (YusyutsuText.color == ss.SelectedTextColor)
+            {
+                ss.BouekiMenu.SetActive(false);
+                ss.YusyutsuMenu.SetActive(true);
             }
         }
         else if (ss.Tenkuu.activeSelf && ss.Frame2.activeSelf && ss.Close.activeSelf)
@@ -140,6 +211,138 @@ public class UmiSelectScript : MonoBehaviour
                 ss.Close.SetActive(false);
                 ss.Key = 0;
                 MText.text = "";
+                ss.YesOrNo();
+            }
+        }
+        else if (ss.YunyuMenu.activeSelf && ss.Key == 0)
+        {
+            ss.Yes.SetActive(true);
+            ss.No.SetActive(true);
+            MText.text = "この商品を輸入しますか?";
+            if (Yunyu1Text.color == ss.SelectedTextColor)
+            {
+                ss.Key = 21;
+            }
+            else if (Yunyu2Text.color == ss.SelectedTextColor)
+            {
+                ss.Key = 22;
+            }
+            else if (Yunyu3Text.color == ss.SelectedTextColor)
+            {
+                ss.Key = 23;
+            }
+        }
+        else if (ss.YusyutsuMenu.activeSelf && ss.Key == 0)
+        {
+            ss.Yes.SetActive(true);
+            ss.No.SetActive(true);
+            MText.text = "この商品を輸出しますか?";
+            if (Yunyu1Text.color == ss.SelectedTextColor)
+            {
+                ss.Key = 31;
+            }
+            else if (Yunyu2Text.color == ss.SelectedTextColor)
+            {
+                ss.Key = 32;
+            }
+            else if (Yunyu3Text.color == ss.SelectedTextColor)
+            {
+                ss.Key = 33;
+            }
+        }
+        else if(ss.Key == 21)
+        {
+            if (YText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+            }
+            else if (NText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+                ss.YesOrNo();
+            }
+        }
+        else if (ss.Key == 22)
+        {
+            if (YText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+            }
+            else if (NText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+                ss.YesOrNo();
+            }
+        }
+        else if (ss.Key == 23)
+        {
+            if (YText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+            }
+            else if (NText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+                ss.YesOrNo();
+            }
+        }
+        else if (ss.Key == 31)
+        {
+            if (YText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+            }
+            else if (NText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+                ss.YesOrNo();
+            }
+        }
+        else if (ss.Key == 32)
+        {
+            if (YText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+            }
+            else if (NText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+                ss.YesOrNo();
+            }
+        }
+        else if (ss.Key == 33)
+        {
+            if (YText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
+            }
+            else if (NText.color == ss.SelectedTextColor)
+            {
+                ss.No.SetActive(false);
+                ss.Yes.SetActive(false);
+                ss.Key = 0;
                 ss.YesOrNo();
             }
         }
