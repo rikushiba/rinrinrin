@@ -76,6 +76,14 @@ public class SendScript : MonoBehaviour
     public int RemoveRockCost = 100;
 
     /*輸出*/
+    /*輸出品*/
+    public string Yusyutsu1goods = "米";
+    public string Yusyutsu2goods = "肉";
+    public string Yusyutsu3goods = "魚";
+    /*収益*/
+    public int Yusyutsu1Syuueki = 100;
+    public int Yusyutsu2Syuueki = 100;
+    public int Yusyutsu3Syuueki = 100;
 
 
     /*輸入*/
