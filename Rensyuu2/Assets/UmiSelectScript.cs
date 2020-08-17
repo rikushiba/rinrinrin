@@ -191,6 +191,12 @@ public class UmiSelectScript : MonoBehaviour
                 ss.YusyutsuMenu.SetActive(true);
             }
         }
+        else if (ss.Tenkuu.activeSelf && ss.Frame2.activeSelf && ss.Back.activeSelf && ss.Close.activeSelf)
+        {
+            ss.Tenkuu.SetActive(false);
+            ss.Frame2.SetActive(false);
+            ss.Close.SetActive(false);
+        }
         else if (ss.Back.activeSelf && !(ss.Frame2.activeSelf) && !(ss.MapMenu.activeSelf))
         {
             if (UBumap.HasTile(ss.FposInt))
@@ -267,7 +273,7 @@ public class UmiSelectScript : MonoBehaviour
                 ss.Key = 33;
             }
         }
-        else if(ss.Key == 21)
+        else if (ss.Key == 21)
         {
             if (YText.color == ss.SelectedTextColor)
             {
