@@ -1451,10 +1451,10 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.305, y: 0.38}
-      - {x: -0.305, y: -0.099999994}
-      - {x: -0.085, y: -0.38}
-      - {x: 0.195, y: -0.38}
-      - {x: 0.305, y: -0.11}
+      - {x: -0.30500022, y: -0.07167975}
+      - {x: -0.002484461, y: -0.37595424}
+      - {x: 0.30262855, y: -0.08061507}
+      - {x: 0.305, y: -0.081679784}
       - {x: 0.305, y: 0.38}
 --- !u!114 &726505212
 MonoBehaviour:
@@ -7744,6 +7744,7 @@ MonoBehaviour:
   Tenkuu: {fileID: 185866685}
   Background: {fileID: 1418296094}
   Building: {fileID: 1102012513}
+  BouekiMenu: {fileID: 0}
   MenuText: {fileID: 1494321168}
   MapMenu: {fileID: 1453896608}
   MessageText: {fileID: 2099354888}
