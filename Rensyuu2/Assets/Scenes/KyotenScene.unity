@@ -7744,6 +7744,8 @@ MonoBehaviour:
   Tenkuu: {fileID: 185866685}
   Background: {fileID: 1418296094}
   Building: {fileID: 1102012513}
+  YunyuMenu: {fileID: 0}
+  YusyutsuMenu: {fileID: 0}
   BouekiMenu: {fileID: 0}
   MenuText: {fileID: 1494321168}
   MapMenu: {fileID: 1453896608}
@@ -7761,6 +7763,18 @@ MonoBehaviour:
   FposInt: {x: 0, y: 0, z: 0}
   RemoveTreeCost: 100
   RemoveRockCost: 100
+  Yusyutsu1goods: "\u7C73"
+  Yusyutsu2goods: "\u8089"
+  Yusyutsu3goods: "\u9B5A"
+  Yusyutsu1Syuueki: 100
+  Yusyutsu2Syuueki: 100
+  Yusyutsu3Syuueki: 100
+  Yunyu1Cost: 100
+  Yunyu2Cost: 100
+  Yunyu3Cost: 100
+  Yunyu1goods: "\u7C73"
+  Yunyu2goods: "\u8089"
+  Yunyu3goods: "\u9B5A"
 --- !u!4 &2127316261
 Transform:
   m_ObjectHideFlags: 0

@@ -25,16 +25,11 @@ public class OpenScript : MonoBehaviour
     Vector3 F2pos;
     Vector3 F2pos2;
     Vector3Int KTpos;
-    Vector3Int firstp;
-    Vector3Int lastp;
-
-    BoundsInt bound;
 
     TileBase t;
     TileBase t2;
     TileBase pret1;
     TileBase pret2;
-    TileBase[] tlist;
 
     Text ShopText;
     Text MapText;
@@ -43,8 +38,6 @@ public class OpenScript : MonoBehaviour
     Text MText;
     Text YText;
     Text NText;
-
-    int stcount;
 
     private void Awake()
     {        
@@ -64,8 +57,6 @@ public class OpenScript : MonoBehaviour
         MText = ss.MessageText.GetComponent<Text>();
         YText = ss.Yes.GetComponent<Text>();
         NText = ss.No.GetComponent<Text>();
-
-        stcount = 0;
     }
 
     // Update is called once per frame
@@ -81,63 +72,15 @@ public class OpenScript : MonoBehaviour
         KTpos.z = (int)F2pos2.z;
         //F2pos2の座標を切り捨て
 
-        firstp = new Vector3Int();
-        firstp.x = ss.FposInt.x - 1;
-        firstp.y = ss.FposInt.y - 1;
-        firstp.z = ss.FposInt.z;
-
-        lastp = new Vector3Int();
-        lastp.x = ss.FposInt.x + 1;
-        lastp.y = ss.FposInt.y + 1;
-        lastp.z = ss.FposInt.z;
-
         t = KBumap.GetTile(ss.FposInt);
         t2 = KTmap.GetTile(KTpos);
 
         pret1 = KBumap.GetTile(ss.FposInt);
-        pret2 = KBamap.GetTile(ss.FposInt);
-
-        bound = new BoundsInt(ss.FposInt, new Vector3Int(1, 1, 0));
-
-        tlist = KBumap.GetTilesBlock(bound);
-
-        
-
-        for (int i = 0; i < tlist.Length; i++)
-        {
-            if (tlist[i] == null)
-            {
-                stcount = +1;
-            }
-        }
+        pret2 = KBamap.GetTile(ss.FposInt); 
     }
     public void onClickAct()
     {
-        if (ss.Tenkuu.activeSelf && ss.Close.activeSelf && ss.Frame2.activeSelf && !(ss.Back.activeSelf) )
-        {
-           //if (pret1 == Tree || pret1 == Tree2 || 
-            //pret1 == Tree3 || pret1 == Tree4 || pret1 == Tree5 || 
-            //pret1 == Tree6 || pret1 == Tree7 || pret1 == Tree8 ||
-            //pret1 == Rock || pret1 == Rock2 || pret1 == Rock3 ||
-            //pret1 == Rock4 || pret1 == Rock5 || pret1 == Rock6)
-            //一応タイルごとに書いたけど使わないかも           
-            if ( KBumap.HasTile(ss.FposInt) )
-            {
-                
-            }
-            else if ( pret2 == ss.UmiTile || pret2 == ss.UmiTile2 ||
-                pret2 == ss.DarkNohara || pret2 == ss.DarkNohara2 || 
-                pret2 == ss.Beach || pret2 == ss.Beach2 )
-            {
-
-            }
-            else
-            {
-                if (stcount <= 5)
-                KBumap.SetTile(ss.FposInt, t2);
-            }
-        }
-        else if (ss.Tenkuu.activeSelf  && ss.Frame2.activeSelf && ss.Back.activeSelf && ss.Close.activeSelf )
+        if (ss.Tenkuu.activeSelf  && ss.Frame2.activeSelf && ss.Back.activeSelf && ss.Close.activeSelf )
         {
             ss.Tenkuu.SetActive(false);
             ss.Frame2.SetActive(false);
@@ -157,10 +100,9 @@ public class OpenScript : MonoBehaviour
             }
             else
             {
-                if (stcount <= 5)
-                {
+                
                     KBumap.SetTile(ss.FposInt, t2);
-                }
+                
             }
         }
         else if (ss.MenuText.activeSelf)
@@ -228,12 +170,6 @@ public class OpenScript : MonoBehaviour
                 ss.Yes.SetActive(true);
                 ss.No.SetActive(true);
                 ss.Close.SetActive(true);
-            }
-            else
-            {
-                ss.Tenkuu.SetActive(true);
-                ss.Close.SetActive(true);
-                ss.Frame2.SetActive(true);
             }
         }
     }
